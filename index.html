@@ -9,9 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   VARIABLES GLOBALES
-   ============================================================ */
 :root{
   --bleu:#0A2540; --bleu-clair:#1a3a5c; --bleu-fonce:#061a2e;
   --or:#D4AF37; --or-hover:#b8952a; --or-clair:#f0d060;
@@ -29,23 +26,19 @@ body{font-family:'Poppins',system-ui,-apple-system,sans-serif;color:var(--texte)
 button{font-family:inherit;cursor:pointer;border:none;}
 a{text-decoration:none;color:inherit;}
 
-/* ANIMATIONS */
 @keyframes fadeInUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.7);}50%{box-shadow:0 0 0 6px rgba(34,197,94,0);}}
 @keyframes shimmer{0%{background-position:-1000px 0;}100%{background-position:1000px 0;}}
-@keyframes checkPop{0%{transform:scale(0);}60%{transform:scale(1.15);}100%{transform:scale(1);}}
 @keyframes slideUp{from{transform:translateY(30px);opacity:0;}to{transform:translateY(0);opacity:1;}}
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 
-/* BARRE VISITEURS */
 .live-bar{background:linear-gradient(90deg,#0A2540,#1a3a5c);color:#fff;padding:8px 16px;font-size:.78rem;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;text-align:center;position:relative;overflow:hidden;}
 .live-bar::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(212,175,55,.1),transparent);animation:shimmer 4s infinite;}
 .live-bar .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:6px;animation:pulse 1.5s infinite;}
 .live-bar strong{color:var(--or);}
 
-/* HEADER */
 header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--gris-bord);padding:14px 0;box-shadow:0 1px 12px rgba(0,0,0,.04);}
 .header-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
 .logo{font-weight:900;font-size:1.15rem;color:var(--bleu);display:flex;align-items:center;gap:8px;letter-spacing:-.02em;}
@@ -59,7 +52,6 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdr
 .btn-wa-header:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(37,211,102,.4);}
 @media(max-width:768px){.nav-links{display:none;}.logo{font-size:1rem;}}
 
-/* HERO */
 .hero{background:linear-gradient(135deg,var(--bleu-fonce) 0%,var(--bleu) 50%,var(--bleu-clair) 100%);color:#fff;padding:100px 20px 80px;text-align:center;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;top:-50%;right:-20%;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,.18) 0%,transparent 70%);}
 .hero::after{content:'';position:absolute;bottom:-40%;left:-15%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,.12) 0%,transparent 70%);}
@@ -76,14 +68,12 @@ header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdr
 .hero-badges span{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);padding:8px 16px;border-radius:50px;border:1px solid rgba(255,255,255,.1);}
 @media(max-width:640px){.hero-cta-secondary{margin-left:0;margin-top:12px;}.hero-cta,.hero-cta-secondary{width:100%;justify-content:center;}}
 
-/* SECTIONS */
 section{padding:80px 20px;}
 .section-inner{max-width:1200px;margin:0 auto;}
 .section-title{text-align:center;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;color:var(--bleu);margin-bottom:14px;letter-spacing:-.02em;line-height:1.2;}
 .section-title em{color:var(--or);font-style:normal;}
 .section-sub{text-align:center;color:var(--texte-muted);max-width:680px;margin:0 auto 56px;font-size:1rem;line-height:1.6;}
 
-/* STATS */
 .stats{background:var(--gris);padding:48px 20px;}
 .stats-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;text-align:center;}
 .stat-item{background:#fff;border-radius:var(--radius);padding:28px 16px;border:1px solid var(--gris-bord);transition:transform .3s,box-shadow .3s;}
@@ -92,7 +82,6 @@ section{padding:80px 20px;}
 .stat-item .num span{color:var(--or);}
 .stat-item .label{font-size:.78rem;color:var(--texte-muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
 
-/* DOMAINES */
 .domaines-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
 .domaine-card{background:var(--blanc);border:2px solid var(--gris-bord);border-radius:var(--radius);padding:32px 20px;text-align:center;cursor:pointer;transition:all .3s;position:relative;overflow:hidden;}
 .domaine-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--or),var(--or-clair));transform:scaleX(0);transform-origin:left;transition:transform .3s;}
@@ -104,7 +93,6 @@ section{padding:80px 20px;}
 .domaine-card p{font-size:.8rem;color:var(--texte-muted);}
 .domaine-card .mini-prix{margin-top:10px;font-size:.72rem;font-weight:800;color:var(--or);letter-spacing:.02em;}
 
-/* CATALOGUE */
 .catalog{background:var(--gris);}
 .catalog-toolbar{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:48px;}
 .filter-btn{background:#fff;border:2px solid var(--gris-bord);color:var(--texte-muted);padding:10px 20px;border-radius:50px;font-weight:700;font-size:.82rem;transition:all .2s;cursor:pointer;}
@@ -131,7 +119,6 @@ section{padding:80px 20px;}
 .btn-acheter{background:linear-gradient(135deg,var(--or),var(--or-clair));color:var(--bleu);padding:11px 18px;border-radius:8px;font-weight:800;font-size:.78rem;transition:all .2s;white-space:nowrap;box-shadow:0 4px 12px rgba(212,175,55,.25);}
 .btn-acheter:hover{background:var(--or-hover);transform:translateY(-2px);box-shadow:0 6px 16px rgba(212,175,55,.4);}
 
-/* TÉMOIGNAGES */
 .temoignages{background:var(--blanc);}
 .temoignages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
 .temoignage{background:var(--gris);border-radius:var(--radius);padding:28px;position:relative;border-left:4px solid var(--or);transition:transform .3s,box-shadow .3s;}
@@ -144,7 +131,6 @@ section{padding:80px 20px;}
 .temoignage-info strong{display:block;font-size:.9rem;color:var(--bleu);font-weight:800;}
 .temoignage-info span{font-size:.78rem;color:var(--texte-muted);}
 
-/* CONFIANCE */
 .confiance{background:var(--gris);}
 .confiance-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;}
 .confiance-item{text-align:center;padding:32px 24px;background:#fff;border-radius:var(--radius);border:1px solid var(--gris-bord);transition:transform .3s,box-shadow .3s;}
@@ -153,7 +139,6 @@ section{padding:80px 20px;}
 .confiance-item h4{font-size:.95rem;font-weight:800;color:var(--bleu);margin-bottom:10px;}
 .confiance-item p{font-size:.85rem;color:var(--texte-muted);line-height:1.55;}
 
-/* FAQ */
 .faq-item{background:var(--blanc);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;border:1px solid var(--gris-bord);transition:box-shadow .2s;}
 .faq-item:hover{box-shadow:var(--ombre);}
 .faq-question{width:100%;text-align:left;padding:20px 24px;background:none;font-size:.95rem;font-weight:700;color:var(--bleu);display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background .2s;}
@@ -164,7 +149,6 @@ section{padding:80px 20px;}
 .faq-answer-inner{padding:0 24px 20px;font-size:.88rem;color:var(--texte-muted);line-height:1.7;}
 .faq-item.open .faq-answer{max-height:400px;}
 
-/* CTA FINAL */
 .cta-final{background:linear-gradient(135deg,var(--bleu-fonce) 0%,var(--bleu) 100%);color:#fff;text-align:center;padding:80px 20px;position:relative;overflow:hidden;}
 .cta-final::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,.15) 0%,transparent 70%);}
 .cta-final-inner{max-width:700px;margin:0 auto;position:relative;z-index:1;}
@@ -172,7 +156,6 @@ section{padding:80px 20px;}
 .cta-final h2 em{color:var(--or);font-style:normal;}
 .cta-final p{color:rgba(255,255,255,.85);font-size:1rem;margin-bottom:32px;}
 
-/* FOOTER */
 footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px 28px;font-size:.85rem;}
 .footer-inner{max-width:1200px;margin:0 auto;}
 .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px;margin-bottom:36px;}
@@ -181,7 +164,6 @@ footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px
 .footer-col a:hover{color:var(--or);}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;text-align:center;font-size:.78rem;color:rgba(255,255,255,.4);}
 
-/* MODALES */
 .modal-overlay{position:fixed;inset:0;background:rgba(10,37,64,.75);backdrop-filter:blur(6px);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto;}
 .modal-overlay.active{display:flex;animation:fadeIn .25s ease;}
 .modal{background:#fff;border-radius:18px;max-width:500px;width:100%;padding:36px 32px;position:relative;animation:slideUp .35s ease;max-height:92vh;overflow-y:auto;box-shadow:0 24px 60px rgba(0,0,0,.4);}
@@ -199,7 +181,6 @@ footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px
 .btn-whatsapp{width:100%;background:var(--vert);color:#fff;padding:15px;border-radius:10px;font-weight:900;font-size:.95rem;transition:all .2s;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 6px 16px rgba(37,211,102,.3);}
 .btn-whatsapp:hover{background:#1eb955;transform:translateY(-2px);box-shadow:0 10px 24px rgba(37,211,102,.45);}
 
-/* CHOIX MODE PAIEMENT */
 .mode-paiement-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:8px;}
 .mode-option{position:relative;cursor:pointer;display:block;}
 .mode-option input{position:absolute;opacity:0;pointer-events:none;}
@@ -209,7 +190,6 @@ footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px
 .mode-option input:checked + .mode-card{border-color:var(--or);background:linear-gradient(135deg,#fffbeb,#fef3c7);box-shadow:0 4px 12px rgba(212,175,55,.25);}
 .mode-option:hover .mode-card{border-color:var(--or);}
 
-/* RÉCAPITULATIF */
 .recap-section{background:var(--gris);border-radius:14px;padding:22px;margin-bottom:18px;}
 .recap-section h4{font-size:.78rem;font-weight:800;color:var(--bleu);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--or);}
 .recap-ligne{display:flex;justify-content:space-between;gap:12px;padding:9px 0;font-size:.87rem;border-bottom:1px dashed var(--gris-bord);}
@@ -238,12 +218,52 @@ footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px
 .recap-etapes{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:16px 18px;margin-bottom:18px;font-size:.82rem;color:#78350f;line-height:1.7;}
 .recap-etapes strong{color:#78350f;}
 
-/* SCROLL TOP */
+/* PROMO */
+.promo-box{background:linear-gradient(135deg,#ecfdf5,#d1fae5);border:2px solid #22c55e;border-radius:10px;padding:14px 16px;margin-bottom:14px;font-size:.85rem;color:#065f46;font-weight:700;display:none;align-items:center;gap:10px;}
+.promo-box.visible{display:flex;}
+.promo-box .promo-ic{font-size:1.3rem;}
+.promo-hint{font-size:.72rem;color:#065f46;margin-top:6px;opacity:.85;}
+
+.reduction-ligne{background:#ecfdf5;border-radius:8px;padding:10px 12px;margin:8px 0;font-size:.82rem;color:#065f46;display:flex;justify-content:space-between;font-weight:800;}
+.reduction-ligne .red-valeur{color:#dc2626;}
+
+/* ADMIN */
+.admin-overlay{position:fixed;inset:0;background:rgba(10,37,64,.98);z-index:3000;display:none;padding:20px;overflow-y:auto;}
+.admin-overlay.active{display:block;animation:fadeIn .3s ease;}
+.admin-box{max-width:1100px;margin:0 auto;background:#fff;border-radius:18px;padding:32px;box-shadow:0 24px 80px rgba(0,0,0,.5);}
+.admin-header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:24px;padding-bottom:18px;border-bottom:2px solid var(--or);}
+.admin-header h2{font-size:1.4rem;font-weight:900;color:var(--bleu);}
+.admin-close{background:var(--gris);color:var(--texte-muted);width:38px;height:38px;border-radius:50%;font-size:1.2rem;display:flex;align-items:center;justify-content:center;}
+.admin-close:hover{background:#e2e8f0;}
+.admin-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:24px;}
+.admin-stat{background:var(--gris);border-radius:12px;padding:16px;text-align:center;border-left:4px solid var(--or);}
+.admin-stat .num{font-size:1.5rem;font-weight:900;color:var(--bleu);display:block;}
+.admin-stat .lbl{font-size:.72rem;color:var(--texte-muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-top:4px;}
+.admin-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;}
+.admin-btn{background:var(--bleu);color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;font-size:.82rem;transition:all .2s;}
+.admin-btn:hover{background:var(--bleu-clair);}
+.admin-btn.danger{background:var(--rouge);}
+.admin-btn.danger:hover{background:#b91c1c;}
+.admin-table-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--gris-bord);}
+.admin-table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:700px;}
+.admin-table th{background:var(--bleu);color:#fff;padding:12px;text-align:left;font-weight:800;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;}
+.admin-table td{padding:12px;border-bottom:1px solid var(--gris-bord);color:var(--texte);}
+.admin-table tr:nth-child(even){background:#fafbfc;}
+.admin-table tr:hover{background:#fffbeb;}
+.admin-empty{text-align:center;padding:40px;color:var(--texte-muted);font-style:italic;}
+.badge-mode{display:inline-block;padding:3px 10px;border-radius:50px;font-size:.7rem;font-weight:800;background:var(--gris);color:var(--bleu);}
+.badge-mode.nita{background:#dbeafe;color:#1e40af;}
+.badge-mode.wave{background:#cffafe;color:#0e7490;}
+.badge-mode.pi{background:#ede9fe;color:#5b21b6;}
+.badge-mode.usdt{background:#fef3c7;color:#92400e;}
+
 .scroll-top{position:fixed;bottom:24px;right:24px;width:50px;height:50px;border-radius:50%;background:var(--or);color:var(--bleu);font-size:1.3rem;display:none;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(212,175,55,.4);z-index:99;transition:transform .2s;}
 .scroll-top:hover{transform:translateY(-4px) scale(1.05);}
 .scroll-top.visible{display:flex;animation:fadeInUp .3s ease;}
 
-/* RESPONSIVE */
+/* Admin trigger caché */
+#adminTrigger{position:fixed;bottom:0;left:0;width:40px;height:40px;z-index:10000;opacity:0;cursor:default;}
+
 @media(max-width:600px){
   section{padding:56px 16px;}
   .hero{padding:72px 16px 60px;}
@@ -256,6 +276,8 @@ footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px
   .mode-paiement-grid{grid-template-columns:repeat(2,1fr);}
   .recap-ligne{flex-direction:column;gap:4px;}
   .recap-ligne .valeur{text-align:left;}
+  .admin-box{padding:20px 16px;}
+  .admin-stats{grid-template-columns:repeat(2,1fr);}
 }
 </style>
 </head>
@@ -424,6 +446,16 @@ footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px
       <div class="form-group"><label for="prixAffiche">Prix</label><input type="text" id="prixAffiche" readonly></div>
 
       <div class="form-group">
+        <label for="codePromo">Code promo (optionnel)</label>
+        <input type="text" id="codePromo" placeholder="Ex : WEB3GEEK10" oninput="appliquerCodePromo()">
+        <div class="promo-hint" id="promoHint">💡 Astuce : certains codes donnent jusqu'à -20%</div>
+        <div class="promo-box" id="promoBox">
+          <span class="promo-ic">🎉</span>
+          <span id="promoTexte">Code appliqué !</span>
+        </div>
+      </div>
+
+      <div class="form-group">
         <label>Mode de paiement *</label>
         <div class="mode-paiement-grid">
           <label class="mode-option">
@@ -463,6 +495,7 @@ footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px
       <div class="recap-ligne"><span class="label">WhatsApp</span><span class="valeur" id="recapTel">—</span></div>
       <div class="recap-ligne"><span class="label">Email</span><span class="valeur" id="recapEmail">—</span></div>
       <div class="recap-ligne"><span class="label">Formation</span><span class="valeur" id="recapFormation">—</span></div>
+      <div class="recap-ligne" id="recapLigneReduction" style="display:none;"><span class="label">Réduction</span><span class="valeur" style="color:#dc2626;" id="recapReduction">—</span></div>
     </div>
 
     <div class="recap-paiement" id="recapPaiementBox">
@@ -492,49 +525,85 @@ footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px
   </div>
 </div>
 
+<!-- DASHBOARD ADMIN -->
+<div class="admin-overlay" id="adminOverlay">
+  <div class="admin-box">
+    <div class="admin-header">
+      <h2>📊 Dashboard Admin — Web3Geek</h2>
+      <div>
+        <button class="admin-btn" onclick="exporterCSV()">📥 Export CSV</button>
+        <button class="admin-close" onclick="fermerAdmin()">✕</button>
+      </div>
+    </div>
+
+    <div class="admin-stats" id="adminStats">
+      <div class="admin-stat"><span class="num" id="statTotal">0</span><span class="lbl">Commandes</span></div>
+      <div class="admin-stat"><span class="num" id="statRevenu">0</span><span class="lbl">Revenu (FCFA)</span></div>
+      <div class="admin-stat"><span class="num" id="statAujourdhui">0</span><span class="lbl">Aujourd'hui</span></div>
+      <div class="admin-stat"><span class="num" id="statPanier">0</span><span class="lbl">Panier moyen</span></div>
+    </div>
+
+    <div class="admin-actions">
+      <button class="admin-btn" onclick="rafraichirAdmin()">🔄 Rafraîchir</button>
+      <button class="admin-btn danger" onclick="effacerCommandes()">🗑️ Tout effacer</button>
+    </div>
+
+    <div class="admin-table-wrap">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Nom</th>
+            <th>WhatsApp</th>
+            <th>Email</th>
+            <th>Formation</th>
+            <th>Prix</th>
+            <th>Promo</th>
+            <th>Payé</th>
+            <th>Mode</th>
+          </tr>
+        </thead>
+        <tbody id="adminTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Retour en haut">↑</button>
+<div id="adminTrigger" title="Admin" onclick="ouvrirAdmin()"></div>
 
 <script>
 /* ============================================================
    CONFIGURATION GLOBALE
    ============================================================ */
 const CONFIG = {
-  whatsappReception: "22799024162"
+  whatsappReception: "22799024162",
+  adminPassword: "web3geek475", // ⚠️ Change ce mot de passe !
+  emailJS: {
+    serviceId: "", // ⚠️ À remplir si tu utilises EmailJS
+    templateId: "",
+    publicKey: ""
+  }
 };
 
 const TAUX_USD_XOF = 564;
 const COINGECKO_PI_ID = 'pi-network';
 const PRIX_PI_FALLBACK_USD = 0.0945;
 
+/* CODES PROMO */
+const CODES_PROMO = {
+  "WEB3GEEK10": { reduction: 10, type: "pourcent" },
+  "BIENVENUE": { reduction: 15, type: "pourcent" },
+  "PI2026": { reduction: 20, type: "pourcent" },
+  "AFRIQUE5": { reduction: 500, type: "fixe" },
+  "NIGER1000": { reduction: 1000, type: "fixe" }
+};
+
 const MODES_PAIEMENT = {
-  nita: {
-    nom: "Nita",
-    icon: "📲",
-    label: "Numéro Nita",
-    adresse: "+22799024162",
-    adresseAffichage: "+227 99 02 41 62"
-  },
-  wave: {
-    nom: "Wave",
-    icon: "🌊",
-    label: "Numéro Wave",
-    adresse: "+22799116878",
-    adresseAffichage: "+227 99 11 68 78"
-  },
-  pi: {
-    nom: "Pi Network (PiCoin)",
-    icon: "🥧",
-    label: "Adresse Pi (Mainnet)",
-    adresse: "MANHBPJHHE6A2TNFIXPNBO3YH3PUYPMR5ZPTHKXIKFPVXTWX5YIBQAAAAAAEG5YB4PA52",
-    adresseAffichage: "MANHBPJHHE6A2TNFIXPNBO3YH3PUYPMR5ZPTHKXIKFPVXTWX5YIBQAAAAAAEG5YB4PA52"
-  },
-  usdt: {
-    nom: "USDT (BEP20)",
-    icon: "₿",
-    label: "Adresse USDT BEP20",
-    adresse: "0x9ae9ec6f753DAb3Cb5A5dB5C51029226647A7187",
-    adresseAffichage: "0x9ae9ec6f753DAb3Cb5A5dB5C51029226647A7187"
-  }
+  nita: { nom: "Nita", icon: "📲", label: "Numéro Nita", adresse: "+22799024162", adresseAffichage: "+227 99 02 41 62" },
+  wave: { nom: "Wave", icon: "🌊", label: "Numéro Wave", adresse: "+22799116878", adresseAffichage: "+227 99 11 68 78" },
+  pi: { nom: "Pi Network (PiCoin)", icon: "🥧", label: "Adresse Pi (Mainnet)", adresse: "MANHBPJHHE6A2TNFIXPNBO3YH3PUYPMR5ZPTHKXIKFPVXTWX5YIBQAAAAAAEG5YB4PA52", adresseAffichage: "MANHBPJHHE6A2TNFIXPNBO3YH3PUYPMR5ZPTHKXIKFPVXTWX5YIBQAAAAAAEG5YB4PA52" },
+  usdt: { nom: "USDT (BEP20)", icon: "₿", label: "Adresse USDT BEP20", adresse: "0x9ae9ec6f753DAb3Cb5A5dB5C51029226647A7187", adresseAffichage: "0x9ae9ec6f753DAb3Cb5A5dB5C51029226647A7187" }
 };
 
 let formationSelectionnee = '';
@@ -543,9 +612,13 @@ let prixSelectionneUSD = 5;
 let modePaiementSelectionne = 'nita';
 let adressePaiementActive = '';
 let montantAfficheFinal = '';
+let codePromoApplique = null;
+let reductionAppliquee = 0;
+let prixFinalFCFA = 2500;
+let prixFinalUSD = 5;
 
 /* ============================================================
-   CATALOGUE COMPLET — 32 FORMATIONS · 7 DOMAINES
+   CATALOGUE
    ============================================================ */
 const CATALOGUE = [
   { id:"crypto", domaine:"Crypto & Pi Network", icon:"🪙", prix:2500, prixUSD:5, themes:[
@@ -562,7 +635,6 @@ const CATALOGUE = [
       { titre:"Devenir un Leader Pi : Animer et Monétiser une Communauté", desc:"Comment j ai construit un groupe de 1000+ personnes autour de Pi." }
     ]}
   ]},
-
   { id:"business", domaine:"Business en Ligne Afrique", icon:"💼", prix:2500, prixUSD:5, themes:[
     { titre:"Démarrer à 0F", produits:[
       { titre:"20 Business à 0F de Capital qui Rapportent au Niger", desc:"Idées concrètes, outils gratuits, et plan d action pour démarrer cette semaine." },
@@ -577,7 +649,6 @@ const CATALOGUE = [
       { titre:"Le Dropshipping Local : Vendre sans Stock ni Capital", desc:"Connecte les fournisseurs de Niamey aux clients. Zéro risque." }
     ]}
   ]},
-
   { id:"finance", domaine:"Argent & Finance Personnelle", icon:"💰", prix:5000, prixUSD:10, themes:[
     { titre:"Gagner Plus", produits:[
       { titre:"Gagner ses Premiers 100 000 FCFA en Ligne en 30 Jours", desc:"Plan jour par jour, même si tu pars de 0F. Actions simples et réalisables." },
@@ -592,7 +663,6 @@ const CATALOGUE = [
       { titre:"Éviter les Arnaques Mobile Money et Banques en Ligne", desc:"Les 12 techniques des escrocs décodées. Protège ton argent." }
     ]}
   ]},
-
   { id:"whatsapp", domaine:"Marketing WhatsApp", icon:"📱", prix:2500, prixUSD:5, themes:[
     { titre:"Contenu qui Vend", produits:[
       { titre:"Rédiger des Messages WhatsApp qui Vendent en 5 Lignes", desc:"50 modèles de messages prêts à copier pour tous les business." },
@@ -607,7 +677,6 @@ const CATALOGUE = [
       { titre:"Automatiser ses Réponses WhatsApp avec des Outils Gratuits", desc:"Gagner 3h par jour. Catalogue, réponses rapides, messages programmés." }
     ]}
   ]},
-
   { id:"avance", domaine:"Business & Finance Avancé", icon:"🎁", prix:10000, prixUSD:20, themes:[
     { titre:"Création & Gestion", produits:[
       { titre:"Créer son Entreprise en OHADA : Guide Complet", desc:"Forme juridique, statuts, RCCM, IFU, CNSS, banque. Toutes les étapes pour créer légalement ton entreprise." },
@@ -621,14 +690,12 @@ const CATALOGUE = [
       { titre:"Maîtrise Facile de l Audit : Guide Complet pour PME", desc:"Comprendre, préparer et réussir un audit interne ou externe. Sans être expert-comptable." }
     ]}
   ]},
-
   { id:"tech", domaine:"Technique & Maintenance", icon:"🛠️", prix:25000, prixUSD:50, themes:[
     { titre:"Maintenance Informatique", produits:[
       { titre:"Maintenance Informatique : Devenir Technicien Support en 90 Jours", desc:"Diagnostic, réparation, assistance. Un métier très demandé en Afrique, accessible sans diplôme." },
       { titre:"Kit Pratique Complet du Maintenance — Support Technique", desc:"25 procédures, scripts clients, modèles de devis et factures prêts à l emploi." }
     ]}
   ]},
-
   { id:"prog", domaine:"Programmation", icon:"🐍", prix:5000, prixUSD:10, themes:[
     { titre:"Python pour Débutants", produits:[
       { titre:"Maîtriser Python en 10 Jours — Guide Pratique Débutant", desc:"De zéro à la création de tes premiers programmes. Plan jour par jour avec exemples concrets." }
@@ -640,20 +707,20 @@ const CATALOGUE = [
    UTILITAIRES
    ============================================================ */
 function formatPrix(prix){
-  return prix.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+  return Number(prix).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 }
-
 function escapeHtml(str){
   return String(str)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+function dateLisible(iso){
+  const d = new Date(iso);
+  return d.toLocaleDateString('fr-FR', {day:'2-digit',month:'2-digit',year:'numeric'}) + ' ' + d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
 }
 
 /* ============================================================
-   RENDU DU CATALOGUE
+   RENDU CATALOGUE
    ============================================================ */
 function renderCatalogue(filterId){
   filterId = filterId || 'all';
@@ -709,12 +776,10 @@ function openModal(id){
   document.getElementById(id).classList.add('active');
   document.body.style.overflow = 'hidden';
 }
-
 function closeModal(id){
   document.getElementById(id).classList.remove('active');
   document.body.style.overflow = '';
 }
-
 const overlays = document.querySelectorAll('.modal-overlay');
 for(let i = 0; i < overlays.length; i++){
   overlays[i].addEventListener('click', function(e){
@@ -725,6 +790,7 @@ document.addEventListener('keydown', function(e){
   if(e.key === 'Escape'){
     const actives = document.querySelectorAll('.modal-overlay.active');
     for(let i = 0; i < actives.length; i++) closeModal(actives[i].id);
+    if(document.getElementById('adminOverlay').classList.contains('active')) fermerAdmin();
   }
 });
 
@@ -737,11 +803,64 @@ function ouvrirCommande(nomFormation, prix, prixUSD){
   formationSelectionnee = nomFormation;
   prixSelectionneFCFA = prix;
   prixSelectionneUSD = prixUSD;
+  codePromoApplique = null;
+  reductionAppliquee = 0;
+  prixFinalFCFA = prix;
+  prixFinalUSD = prixUSD;
   document.getElementById('formation').value = nomFormation;
   document.getElementById('prixAffiche').value = formatPrix(prix) + ' FCFA (soit ~' + prixUSD + '$)';
+  document.getElementById('codePromo').value = '';
+  document.getElementById('promoBox').classList.remove('visible');
   const radios = document.querySelectorAll('input[name="modePaiement"]');
   for(let i = 0; i < radios.length; i++) radios[i].checked = false;
   openModal('modalCommande');
+}
+
+function appliquerCodePromo(){
+  const code = document.getElementById('codePromo').value.trim().toUpperCase();
+  const box = document.getElementById('promoBox');
+  const texte = document.getElementById('promoTexte');
+  const hint = document.getElementById('promoHint');
+
+  if(!code){
+    codePromoApplique = null;
+    reductionAppliquee = 0;
+    prixFinalFCFA = prixSelectionneFCFA;
+    prixFinalUSD = prixSelectionneUSD;
+    box.classList.remove('visible');
+    hint.textContent = '💡 Astuce : certains codes donnent jusqu\'à -20%';
+    hint.style.color = '#065f46';
+    document.getElementById('prixAffiche').value = formatPrix(prixSelectionneFCFA) + ' FCFA (soit ~' + prixSelectionneUSD + '$)';
+    return;
+  }
+
+  const promo = CODES_PROMO[code];
+  if(promo){
+    codePromoApplique = code;
+    if(promo.type === 'pourcent'){
+      reductionAppliquee = Math.round(prixSelectionneFCFA * promo.reduction / 100);
+    } else {
+      reductionAppliquee = promo.reduction;
+    }
+    if(reductionAppliquee > prixSelectionneFCFA) reductionAppliquee = prixSelectionneFCFA;
+    prixFinalFCFA = prixSelectionneFCFA - reductionAppliquee;
+    prixFinalUSD = Math.round((prixFinalFCFA / TAUX_USD_XOF) * 100) / 100;
+    const libelle = promo.type === 'pourcent' ? '-' + promo.reduction + '%' : '-' + formatPrix(promo.reduction) + ' FCFA';
+    texte.textContent = 'Code ' + code + ' appliqué ! Réduction : ' + libelle;
+    box.classList.add('visible');
+    hint.textContent = '✅ Code valide';
+    hint.style.color = '#065f46';
+    document.getElementById('prixAffiche').value = formatPrix(prixFinalFCFA) + ' FCFA (au lieu de ' + formatPrix(prixSelectionneFCFA) + ' FCFA)';
+  } else {
+    codePromoApplique = null;
+    reductionAppliquee = 0;
+    prixFinalFCFA = prixSelectionneFCFA;
+    prixFinalUSD = prixSelectionneUSD;
+    box.classList.remove('visible');
+    hint.textContent = '❌ Code invalide ou expiré';
+    hint.style.color = '#dc2626';
+    document.getElementById('prixAffiche').value = formatPrix(prixSelectionneFCFA) + ' FCFA (soit ~' + prixSelectionneUSD + '$)';
+  }
 }
 
 async function validerCommande(e){
@@ -764,6 +883,14 @@ async function validerCommande(e){
   document.getElementById('recapEmail').textContent = email;
   document.getElementById('recapFormation').textContent = formationSelectionnee;
 
+  const ligneReduc = document.getElementById('recapLigneReduction');
+  if(reductionAppliquee > 0){
+    ligneReduc.style.display = 'flex';
+    document.getElementById('recapReduction').textContent = '-' + formatPrix(reductionAppliquee) + ' FCFA (code ' + codePromoApplique + ')';
+  } else {
+    ligneReduc.style.display = 'none';
+  }
+
   document.getElementById('recapPayIcon').textContent = mode.icon;
   document.getElementById('recapPayName').textContent = mode.nom;
   document.getElementById('recapAdresseLabel').textContent = mode.label;
@@ -774,13 +901,13 @@ async function validerCommande(e){
   const boxAlt = document.getElementById('recapMontantAlt');
 
   if(modePaiementSelectionne === 'nita' || modePaiementSelectionne === 'wave'){
-    montantAfficheFinal = formatPrix(prixSelectionneFCFA) + ' FCFA';
+    montantAfficheFinal = formatPrix(prixFinalFCFA) + ' FCFA';
     boxMontant.textContent = montantAfficheFinal;
-    boxAlt.textContent = '≈ ' + prixSelectionneUSD + ' USD';
+    boxAlt.textContent = '≈ ' + prixFinalUSD + ' USD' + (reductionAppliquee > 0 ? ' (économie : ' + formatPrix(reductionAppliquee) + ' FCFA)' : '');
   } else if(modePaiementSelectionne === 'usdt'){
-    montantAfficheFinal = prixSelectionneUSD + ' USDT';
+    montantAfficheFinal = prixFinalUSD + ' USDT';
     boxMontant.textContent = montantAfficheFinal;
-    boxAlt.textContent = '≈ ' + formatPrix(prixSelectionneFCFA) + ' FCFA (BEP20 - Binance Smart Chain)';
+    boxAlt.textContent = '≈ ' + formatPrix(prixFinalFCFA) + ' FCFA (BEP20 - Binance Smart Chain)';
   } else if(modePaiementSelectionne === 'pi'){
     boxMontant.textContent = '⏳ Calcul...';
     boxAlt.textContent = 'Récupération du cours Pi en direct...';
@@ -793,17 +920,37 @@ async function validerCommande(e){
         const p = data[COINGECKO_PI_ID] && data[COINGECKO_PI_ID].usd;
         if(p && p > 0) prixPiUSD = p;
       }
-      const quantitePi = prixSelectionneUSD / prixPiUSD;
+      const quantitePi = prixFinalUSD / prixPiUSD;
       montantAfficheFinal = quantitePi.toFixed(2) + ' π';
       boxMontant.textContent = montantAfficheFinal;
-      boxAlt.textContent = '≈ ' + prixSelectionneUSD + ' USD · 1 π ≈ $' + prixPiUSD.toFixed(4) + ' (cours ' + new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}) + ')';
+      boxAlt.textContent = '≈ ' + prixFinalUSD + ' USD · 1 π ≈ $' + prixPiUSD.toFixed(4) + ' (cours ' + new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}) + ')';
     } catch(err){
-      const quantitePi = prixSelectionneUSD / PRIX_PI_FALLBACK_USD;
+      const quantitePi = prixFinalUSD / PRIX_PI_FALLBACK_USD;
       montantAfficheFinal = quantitePi.toFixed(2) + ' π';
       boxMontant.textContent = montantAfficheFinal;
-      boxAlt.textContent = '≈ ' + prixSelectionneUSD + ' USD · estimation (cours indicatif)';
+      boxAlt.textContent = '≈ ' + prixFinalUSD + ' USD · estimation (cours indicatif)';
     }
   }
+
+  // Sauvegarde commande
+  sauvegarderCommande({
+    date: new Date().toISOString(),
+    nom: nom,
+    whatsapp: tel,
+    email: email,
+    formation: formationSelectionnee,
+    prixOriginal: prixSelectionneFCFA,
+    prixFinal: prixFinalFCFA,
+    prixFinalUSD: prixFinalUSD,
+    codePromo: codePromoApplique || '',
+    reduction: reductionAppliquee,
+    mode: modePaiementSelectionne,
+    modeNom: mode.nom,
+    montantPaye: montantAfficheFinal
+  });
+
+  // Email automatique (silencieux, best effort)
+  envoyerEmailAutomatique(nom, email, formationSelectionnee, mode.nom, montantAfficheFinal);
 
   closeModal('modalCommande');
   setTimeout(function(){ openModal('modalRecap'); }, 200);
@@ -828,7 +975,6 @@ function copierTexte(texte, bouton){
     fallbackCopy(texte, ok);
   }
 }
-
 function fallbackCopy(texte, callback){
   const ta = document.createElement('textarea');
   ta.value = texte;
@@ -839,7 +985,6 @@ function fallbackCopy(texte, callback){
   try { document.execCommand('copy'); callback(); } catch(e){}
   document.body.removeChild(ta);
 }
-
 function copierAdresseRecap(btn){
   copierTexte(adressePaiementActive, btn);
 }
@@ -853,19 +998,154 @@ function renvoyerWhatsApp(){
   const email = document.getElementById('email').value.trim();
   const mode = MODES_PAIEMENT[modePaiementSelectionne];
 
-  const message =
-    'Bonjour, je viens de passer commande :\n\n' +
-    '📚 *' + formationSelectionnee + '*\n' +
-    '💰 Prix : ' + formatPrix(prixSelectionneFCFA) + ' FCFA (~' + prixSelectionneUSD + '$)\n' +
-    '💳 Mode de paiement : *' + mode.nom + '*\n' +
-    '🎯 Montant payé : *' + montantAfficheFinal + '*\n\n' +
-    '👤 Nom : ' + nom + '\n' +
-    '📱 WhatsApp : ' + tel + '\n' +
-    '✉️ Email : ' + email + '\n\n' +
-    'Voici ma capture de paiement 👇';
+  let msg = 'Bonjour, je viens de passer commande :\n\n';
+  msg += '📚 *' + formationSelectionnee + '*\n';
+  msg += '💰 Prix initial : ' + formatPrix(prixSelectionneFCFA) + ' FCFA\n';
+  if(reductionAppliquee > 0){
+    msg += '🎟️ Code promo : *' + codePromoApplique + '* (-' + formatPrix(reductionAppliquee) + ' FCFA)\n';
+    msg += '💵 Prix final : *' + formatPrix(prixFinalFCFA) + ' FCFA*\n';
+  } else {
+    msg += '💵 Prix : ' + formatPrix(prixFinalFCFA) + ' FCFA (~' + prixFinalUSD + '$)\n';
+  }
+  msg += '💳 Mode de paiement : *' + mode.nom + '*\n';
+  msg += '🎯 Montant payé : *' + montantAfficheFinal + '*\n\n';
+  msg += '👤 Nom : ' + nom + '\n';
+  msg += '📱 WhatsApp : ' + tel + '\n';
+  msg += '✉️ Email : ' + email + '\n\n';
+  msg += 'Voici ma capture de paiement 👇';
 
-  const url = 'https://wa.me/' + CONFIG.whatsappReception + '?text=' + encodeURIComponent(message);
+  const url = 'https://wa.me/' + CONFIG.whatsappReception + '?text=' + encodeURIComponent(msg);
   window.open(url, '_blank');
+}
+
+/* ============================================================
+   SAUVEGARDE COMMANDES (localStorage)
+   ============================================================ */
+const STORAGE_KEY = 'web3geek_commandes';
+
+function getCommandes(){
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch(e){
+    return [];
+  }
+}
+function sauvegarderCommande(commande){
+  try {
+    const commandes = getCommandes();
+    commandes.unshift(commande);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(commandes));
+  } catch(e){
+    console.warn('Impossible de sauvegarder la commande', e);
+  }
+}
+function effacerCommandes(){
+  if(confirm('⚠️ Effacer TOUTES les commandes enregistrées ? Cette action est irréversible.')){
+    localStorage.removeItem(STORAGE_KEY);
+    rafraichirAdmin();
+  }
+}
+function exporterCSV(){
+  const commandes = getCommandes();
+  if(commandes.length === 0){
+    alert('Aucune commande à exporter.');
+    return;
+  }
+  const headers = ['Date','Nom','WhatsApp','Email','Formation','Prix initial (FCFA)','Code promo','Réduction (FCFA)','Prix final (FCFA)','Prix final (USD)','Mode paiement','Montant payé'];
+  const lignes = commandes.map(function(c){
+    return [
+      c.date, c.nom, c.whatsapp, c.email, c.formation,
+      c.prixOriginal, c.codePromo, c.reduction, c.prixFinal, c.prixFinalUSD,
+      c.modeNom, c.montantPaye
+    ].map(function(v){ return '"' + String(v == null ? '' : v).replace(/"/g,'""') + '"'; }).join(',');
+  });
+  const csv = '\uFEFF' + headers.join(',') + '\n' + lignes.join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'web3geek-commandes-' + new Date().toISOString().slice(0,10) + '.csv';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+/* ============================================================
+   ADMIN
+   ============================================================ */
+function ouvrirAdmin(){
+  const pwd = prompt('🔒 Mot de passe admin :');
+  if(pwd === null) return;
+  if(pwd !== CONFIG.adminPassword){
+    alert('❌ Mot de passe incorrect.');
+    return;
+  }
+  document.getElementById('adminOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  rafraichirAdmin();
+}
+function fermerAdmin(){
+  document.getElementById('adminOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+function rafraichirAdmin(){
+  const commandes = getCommandes();
+  const tbody = document.getElementById('adminTableBody');
+
+  const totalRevenu = commandes.reduce(function(s, c){ return s + (Number(c.prixFinal) || 0); }, 0);
+  const today = new Date().toISOString().slice(0,10);
+  const nbAujourdhui = commandes.filter(function(c){ return c.date && c.date.slice(0,10) === today; }).length;
+  const panierMoyen = commandes.length > 0 ? Math.round(totalRevenu / commandes.length) : 0;
+
+  document.getElementById('statTotal').textContent = commandes.length;
+  document.getElementById('statRevenu').textContent = formatPrix(totalRevenu);
+  document.getElementById('statAujourdhui').textContent = nbAujourdhui;
+  document.getElementById('statPanier').textContent = formatPrix(panierMoyen);
+
+  if(commandes.length === 0){
+    tbody.innerHTML = '<tr><td colspan="9" class="admin-empty">📭 Aucune commande enregistrée pour le moment.</td></tr>';
+    return;
+  }
+
+  let html = '';
+  commandes.forEach(function(c){
+    html += '<tr>';
+    html += '<td>' + escapeHtml(dateLisible(c.date)) + '</td>';
+    html += '<td><strong>' + escapeHtml(c.nom) + '</strong></td>';
+    html += '<td>' + escapeHtml(c.whatsapp) + '</td>';
+    html += '<td>' + escapeHtml(c.email) + '</td>';
+    html += '<td>' + escapeHtml(c.formation) + '</td>';
+    html += '<td>' + formatPrix(c.prixOriginal) + ' F</td>';
+    html += '<td>' + (c.codePromo ? '🎟️ ' + escapeHtml(c.codePromo) : '—') + '</td>';
+    html += '<td><strong style="color:#065f46;">' + formatPrix(c.prixFinal) + ' F</strong></td>';
+    html += '<td><span class="badge-mode ' + escapeHtml(c.mode) + '">' + escapeHtml(c.modeNom) + '</span></td>';
+    html += '</tr>';
+  });
+  tbody.innerHTML = html;
+}
+
+/* ============================================================
+   EMAIL AUTOMATIQUE (mailto fallback + EmailJS si configuré)
+   ============================================================ */
+function envoyerEmailAutomatique(nom, emailClient, formation, modeNom, montant){
+  // 1) EmailJS (si configuré)
+  if(CONFIG.emailJS.serviceId && CONFIG.emailJS.templateId && CONFIG.emailJS.publicKey){
+    try {
+      if(typeof emailjs !== 'undefined'){
+        emailjs.send(CONFIG.emailJS.serviceId, CONFIG.emailJS.templateId, {
+          to_email: emailClient,
+          to_name: nom,
+          formation: formation,
+          mode_paiement: modeNom,
+          montant: montant
+        });
+      }
+    } catch(e){ console.warn('EmailJS échec', e); }
+  }
+  // 2) Note dans la console (info)
+  console.log('📧 Email de confirmation à envoyer à :', emailClient, '| Formation :', formation);
 }
 
 /* ============================================================
@@ -873,7 +1153,6 @@ function renvoyerWhatsApp(){
    ============================================================ */
 let nbVisiteurs = 154;
 let nbVentes = 132;
-
 function animerCompteurs(){
   const elVis = document.getElementById('visiteurs');
   const elVentes = document.getElementById('ventes');
@@ -924,7 +1203,6 @@ function initScrollReveal(){
   }, { threshold: 0.1 });
   for(let i = 0; i < reveals.length; i++) observer.observe(reveals[i]);
 }
-
 function initScrollTop(){
   const btn = document.getElementById('scrollTop');
   window.addEventListener('scroll', function(){
@@ -934,7 +1212,7 @@ function initScrollTop(){
 }
 
 /* ============================================================
-   INITIALISATION
+   INIT
    ============================================================ */
 document.addEventListener('DOMContentLoaded', function(){
   renderCatalogue('all');
