@@ -199,40 +199,44 @@ footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px
 .btn-whatsapp{width:100%;background:var(--vert);color:#fff;padding:15px;border-radius:10px;font-weight:900;font-size:.95rem;transition:all .2s;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 6px 16px rgba(37,211,102,.3);}
 .btn-whatsapp:hover{background:#1eb955;transform:translateY(-2px);box-shadow:0 10px 24px rgba(37,211,102,.45);}
 
-/* PAIEMENT */
-.paiement-info{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:16px 18px;margin-bottom:18px;font-size:.82rem;color:#78350f;line-height:1.6;}
-.paiement-info strong{color:#78350f;}
-.paiement-bloc{background:var(--gris);border-radius:12px;padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;gap:14px;border-left:4px solid var(--or);position:relative;}
-.paiement-bloc.pi-bloc{border-left-color:var(--pi);background:linear-gradient(135deg,#f5f3ff 0%,#ede9fe 100%);}
-.paiement-bloc.pi-bloc .pay-label{color:var(--pi);}
-.paiement-bloc.pi-bloc .pay-valeur{color:#5b21b6;}
-.paiement-bloc .pay-icon{font-size:1.6rem;flex-shrink:0;}
-.paiement-bloc .pay-details{flex-grow:1;min-width:0;}
-.paiement-bloc .pay-label{font-size:.7rem;font-weight:800;color:var(--texte-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px;}
-.paiement-bloc .pay-valeur{font-size:.88rem;font-weight:700;color:var(--bleu);word-break:break-all;font-family:'Courier New',monospace;}
-.btn-copier{background:var(--or);color:var(--bleu);padding:9px 14px;border-radius:8px;font-size:.72rem;font-weight:800;white-space:nowrap;flex-shrink:0;transition:all .2s;}
-.btn-copier:hover{background:var(--or-hover);transform:scale(1.05);}
-.btn-copier.copied{background:#22c55e;color:#fff;}
-.note-pi{background:#f5f3ff;border:1px solid #ddd6fe;border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:.75rem;color:#5b21b6;line-height:1.55;}
+/* CHOIX MODE PAIEMENT */
+.mode-paiement-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:8px;}
+.mode-option{position:relative;cursor:pointer;display:block;}
+.mode-option input{position:absolute;opacity:0;pointer-events:none;}
+.mode-option .mode-card{border:2px solid var(--gris-bord);border-radius:10px;padding:14px 10px;text-align:center;transition:all .2s;background:#fff;}
+.mode-option .mode-card .mode-ic{font-size:1.5rem;display:block;margin-bottom:4px;}
+.mode-option .mode-card .mode-nm{font-size:.75rem;font-weight:800;color:var(--bleu);}
+.mode-option input:checked + .mode-card{border-color:var(--or);background:linear-gradient(135deg,#fffbeb,#fef3c7);box-shadow:0 4px 12px rgba(212,175,55,.25);}
+.mode-option:hover .mode-card{border-color:var(--or);}
 
-/* ÉQUIVALENT PI */
-.pi-equivalent{background:linear-gradient(135deg,#8B5CF6,#6D28D9);color:#fff;border-radius:10px;padding:14px 16px;margin-bottom:14px;font-size:.85rem;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;box-shadow:0 6px 16px rgba(139,92,246,.3);}
-.pi-equivalent .pi-amount{font-size:1.15rem;font-weight:900;font-family:'Courier New',monospace;}
+/* RÉCAPITULATIF */
+.recap-section{background:var(--gris);border-radius:14px;padding:22px;margin-bottom:18px;}
+.recap-section h4{font-size:.78rem;font-weight:800;color:var(--bleu);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--or);}
+.recap-ligne{display:flex;justify-content:space-between;gap:12px;padding:9px 0;font-size:.87rem;border-bottom:1px dashed var(--gris-bord);}
+.recap-ligne:last-child{border-bottom:none;}
+.recap-ligne .label{color:var(--texte-muted);font-weight:600;flex-shrink:0;}
+.recap-ligne .valeur{color:var(--bleu);font-weight:700;text-align:right;word-break:break-word;}
 
-/* MERCI */
-.merci-overlay{position:fixed;inset:0;background:rgba(10,37,64,.95);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto;}
-.merci-overlay.active{display:flex;animation:fadeIn .3s ease;}
-.merci-box{background:#fff;border-radius:20px;max-width:540px;width:100%;padding:44px 36px;text-align:center;position:relative;animation:slideUp .4s ease;box-shadow:0 24px 80px rgba(0,0,0,.5);}
-.merci-check{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,#22c55e,#16a34a);display:flex;align-items:center;justify-content:center;font-size:2.7rem;color:#fff;margin:0 auto 26px;animation:checkPop .5s ease;box-shadow:0 8px 24px rgba(34,197,94,.4);}
-.merci-box h2{font-size:1.7rem;color:var(--bleu);font-weight:900;margin-bottom:14px;letter-spacing:-.02em;}
-.merci-box .merci-sub{font-size:.95rem;color:var(--texte-muted);line-height:1.65;margin-bottom:26px;}
-.merci-etapes{text-align:left;background:var(--gris);border-radius:14px;padding:24px;margin-bottom:26px;}
-.merci-etapes h4{font-size:.85rem;font-weight:800;color:var(--bleu);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px;}
-.merci-etape{display:flex;gap:14px;margin-bottom:16px;font-size:.85rem;color:var(--texte-muted);line-height:1.6;}
-.merci-etape:last-child{margin-bottom:0;}
-.merci-etape .etape-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--or);color:var(--bleu);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.8rem;}
-.merci-recap{background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:16px;margin-bottom:22px;font-size:.82rem;color:#1e40af;text-align:left;line-height:1.7;}
-.merci-recap strong{color:#1e3a8a;}
+.recap-paiement{background:linear-gradient(135deg,#0A2540,#1a3a5c);color:#fff;border-radius:14px;padding:22px;margin-bottom:18px;text-align:center;position:relative;overflow:hidden;}
+.recap-paiement::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,.2) 0%,transparent 70%);}
+.recap-paiement .pay-method-icon{font-size:2.2rem;margin-bottom:8px;position:relative;z-index:1;}
+.recap-paiement .pay-method-name{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:var(--or);font-weight:800;margin-bottom:6px;position:relative;z-index:1;}
+.recap-paiement .pay-method-label{font-size:.85rem;color:rgba(255,255,255,.8);margin-bottom:16px;position:relative;z-index:1;}
+
+.montant-box{background:rgba(212,175,55,.15);border:2px solid var(--or);border-radius:12px;padding:16px;margin-bottom:16px;position:relative;z-index:1;}
+.montant-box .montant-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--or);font-weight:800;margin-bottom:6px;}
+.montant-box .montant-valeur{font-size:1.6rem;font-weight:900;color:#fff;line-height:1.1;letter-spacing:-.02em;word-break:break-word;}
+.montant-box .montant-alt{font-size:.78rem;color:rgba(255,255,255,.7);margin-top:6px;}
+
+.adresse-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:14px;position:relative;z-index:1;}
+.adresse-box .adresse-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--or);font-weight:800;margin-bottom:6px;}
+.adresse-box .adresse-valeur{font-size:.82rem;font-weight:700;color:#fff;word-break:break-all;font-family:'Courier New',monospace;line-height:1.5;margin-bottom:10px;}
+.adresse-box .btn-copier{width:100%;background:var(--or);color:var(--bleu);padding:11px;border-radius:8px;font-size:.78rem;font-weight:800;transition:all .2s;}
+.adresse-box .btn-copier:hover{background:var(--or-hover);transform:translateY(-2px);}
+.adresse-box .btn-copier.copied{background:#22c55e;color:#fff;}
+
+.recap-etapes{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:16px 18px;margin-bottom:18px;font-size:.82rem;color:#78350f;line-height:1.7;}
+.recap-etapes strong{color:#78350f;}
 
 /* SCROLL TOP */
 .scroll-top{position:fixed;bottom:24px;right:24px;width:50px;height:50px;border-radius:50%;background:var(--or);color:var(--bleu);font-size:1.3rem;display:none;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(212,175,55,.4);z-index:99;transition:transform .2s;}
@@ -247,12 +251,11 @@ footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px
   .modal{padding:32px 22px;border-radius:16px;}
   .produit-footer{flex-direction:column;align-items:stretch;}
   .btn-acheter{text-align:center;padding:13px;font-size:.82rem;}
-  .merci-box{padding:36px 24px;border-radius:16px;}
-  .merci-box h2{font-size:1.4rem;}
-  .paiement-bloc{flex-wrap:wrap;}
-  .btn-copier{width:100%;margin-top:8px;}
   .domaine-header{flex-wrap:wrap;}
   .domaine-header .prix-domaine{margin-left:0;width:100%;text-align:center;margin-top:8px;}
+  .mode-paiement-grid{grid-template-columns:repeat(2,1fr);}
+  .recap-ligne{flex-direction:column;gap:4px;}
+  .recap-ligne .valeur{text-align:left;}
 }
 </style>
 </head>
@@ -378,9 +381,9 @@ footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px
   <div class="section-inner reveal">
     <h2 class="section-title">Questions <em>Fréquentes</em></h2>
     <p class="section-sub">Tout ce que tu dois savoir avant de commander.</p>
-    <div class="faq-item"><button class="faq-question">Comment se passe le paiement ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">Tu choisis ta formation, tu remplis le formulaire, puis tu paies le prix affiché (en FCFA ou en Pi/Crypto équivalent) via Nita, Wave, Pi Network ou Crypto USDT (BEP20). Ensuite tu envoies ta capture WhatsApp et tu reçois ton PDF sous 5 min.</div></div></div>
+    <div class="faq-item"><button class="faq-question">Comment se passe le paiement ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">Tu choisis ta formation, tu cliques sur Acheter, tu remplis tes informations et tu choisis ton mode de paiement (Nita, Wave, Pi Network ou USDT). Un récapitulatif s'affiche avec le montant exact et l'adresse de paiement. Tu paies, puis tu envoies ta capture WhatsApp pour recevoir ton PDF sous 5 min.</div></div></div>
     <div class="faq-item"><button class="faq-question">Pourquoi les prix varient selon les domaines ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">Chaque domaine a son niveau de complexité et sa valeur. Crypto, Business et WhatsApp sont accessibles à partir de 2500 FCFA. Finance et Python sont à 5000 FCFA. Business avancé à 10000 FCFA. Technique/Maintenance à 25000 FCFA.</div></div></div>
-    <div class="faq-item"><button class="faq-question">Comment payer en Pi Network (PiCoin) ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">Ouvre ton Wallet Pi, clique sur Envoyer, colle l'adresse Pi affichée, saisis l'équivalent en Pi affiché en temps réel sur cette page, puis valide. Vérifie toujours que tu es bien sur le Mainnet Pi avant de valider.</div></div></div>
+    <div class="faq-item"><button class="faq-question">Comment payer en Pi Network (PiCoin) ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">Choisis "Pi Network" comme mode de paiement dans le formulaire. Le récapitulatif t'affichera automatiquement l'équivalent en Pi selon le cours en direct. Ouvre ton Wallet Pi, clique sur Envoyer, colle l'adresse Pi affichée, saisis la quantité exacte en Pi, puis valide sur le Mainnet.</div></div></div>
     <div class="faq-item"><button class="faq-question">Puis-je acheter plusieurs modules d'un coup ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">Oui. Tu peux commander plusieurs formations. Pour 3 modules ou plus, contacte-nous sur WhatsApp : nous t'offrons un tarif réduit.</div></div></div>
     <div class="faq-item"><button class="faq-question">Comment je reçois mon PDF ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">Après avoir envoyé ta capture de paiement sur WhatsApp, notre équipe vérifie et t'envoie le lien de téléchargement directement en message privé sous 5 minutes.</div></div></div>
     <div class="faq-item"><button class="faq-question">Y a-t-il un remboursement ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">S'agissant de produits numériques livrés instantanément, aucun remboursement n'est possible après réception du PDF. En revanche, si tu ne reçois rien, tu es remboursé à 100%.</div></div></div>
@@ -407,66 +410,85 @@ footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px
   </div>
 </footer>
 
+<!-- MODALE FORMULAIRE DE COMMANDE -->
 <div class="modal-overlay" id="modalCommande">
   <div class="modal">
     <button class="modal-close" onclick="closeModal('modalCommande')" aria-label="Fermer">✕</button>
     <h3>📝 Formulaire de Commande</h3>
-    <p class="modal-sub">Remplis tes informations puis passe au paiement.</p>
+    <p class="modal-sub">Remplis tes informations et choisis ton mode de paiement.</p>
     <form id="formCommande" onsubmit="validerCommande(event)">
       <div class="form-group"><label for="nom">Nom complet *</label><input type="text" id="nom" required placeholder="Ex : Amadou Diallo"></div>
       <div class="form-group"><label for="whatsapp">Numéro WhatsApp *</label><input type="tel" id="whatsapp" required placeholder="+227 90 00 00 00"></div>
       <div class="form-group"><label for="email">Email *</label><input type="email" id="email" required placeholder="ton@email.com"></div>
       <div class="form-group"><label for="formation">Formation choisie</label><input type="text" id="formation" readonly></div>
       <div class="form-group"><label for="prixAffiche">Prix</label><input type="text" id="prixAffiche" readonly></div>
+
+      <div class="form-group">
+        <label>Mode de paiement *</label>
+        <div class="mode-paiement-grid">
+          <label class="mode-option">
+            <input type="radio" name="modePaiement" value="nita" required>
+            <div class="mode-card"><span class="mode-ic">📲</span><span class="mode-nm">Nita</span></div>
+          </label>
+          <label class="mode-option">
+            <input type="radio" name="modePaiement" value="wave">
+            <div class="mode-card"><span class="mode-ic">🌊</span><span class="mode-nm">Wave</span></div>
+          </label>
+          <label class="mode-option">
+            <input type="radio" name="modePaiement" value="pi">
+            <div class="mode-card"><span class="mode-ic">🥧</span><span class="mode-nm">Pi Network</span></div>
+          </label>
+          <label class="mode-option">
+            <input type="radio" name="modePaiement" value="usdt">
+            <div class="mode-card"><span class="mode-ic">₿</span><span class="mode-nm">USDT (BEP20)</span></div>
+          </label>
+        </div>
+      </div>
+
       <button type="submit" class="btn-primary">Valider ma commande →</button>
     </form>
   </div>
 </div>
 
-<div class="modal-overlay" id="modalPaiement">
-  <div class="modal">
-    <button class="modal-close" onclick="closeModal('modalPaiement')" aria-label="Fermer">✕</button>
-    <h3>💳 Modalités de Paiement</h3>
-    <p class="modal-sub">Paie le montant affiché via l'un des moyens ci-dessous.</p>
-    <div class="paiement-info">⚠️ <strong>Important :</strong> après paiement, envoie ta capture WhatsApp au <strong>+227 99 02 41 62</strong>. Tu recevras ton PDF sous 5 minutes.</div>
+<!-- MODALE RÉCAPITULATIF -->
+<div class="modal-overlay" id="modalRecap">
+  <div class="modal" style="max-width:560px;">
+    <button class="modal-close" onclick="closeModal('modalRecap')" aria-label="Fermer">✕</button>
+    <h3>✅ Récapitulatif de ta Commande</h3>
+    <p class="modal-sub">Vérifie tes informations puis effectue le paiement à l'adresse indiquée.</p>
 
-    <div class="paiement-bloc"><div class="pay-icon">📲</div><div class="pay-details"><div class="pay-label">Nita</div><div class="pay-valeur">+227 99 02 41 62</div></div><button class="btn-copier" onclick="copierTexte('+22799024162', this)">Copier</button></div>
-    <div class="paiement-bloc"><div class="pay-icon">🌊</div><div class="pay-details"><div class="pay-label">Wave</div><div class="pay-valeur">+227 99 11 68 78</div></div><button class="btn-copier" onclick="copierTexte('+22799116878', this)">Copier</button></div>
-
-    <div class="paiement-bloc pi-bloc">
-      <div class="pay-icon">🥧</div>
-      <div class="pay-details"><div class="pay-label">Pi Network (PiCoin)</div><div class="pay-valeur">MANHBPJHHE6A2TNFIXPNBO3YH3PUYPMR5ZPTHKXIKFPVXTWX5YIBQAAAAAAEG5YB4PA52</div></div>
-      <button class="btn-copier" onclick="copierTexte('MANHBPJHHE6A2TNFIXPNBO3YH3PUYPMR5ZPTHKXIKFPVXTWX5YIBQAAAAAAEG5YB4PA52', this)">Copier</button>
+    <div class="recap-section">
+      <h4>👤 Tes informations</h4>
+      <div class="recap-ligne"><span class="label">Nom complet</span><span class="valeur" id="recapNom">—</span></div>
+      <div class="recap-ligne"><span class="label">WhatsApp</span><span class="valeur" id="recapTel">—</span></div>
+      <div class="recap-ligne"><span class="label">Email</span><span class="valeur" id="recapEmail">—</span></div>
+      <div class="recap-ligne"><span class="label">Formation</span><span class="valeur" id="recapFormation">—</span></div>
     </div>
 
-    <div class="pi-equivalent" id="piEquivalent">
-      <span>💱 Équivalent à payer :</span>
-      <span class="pi-amount" id="piAmount">⏳ Chargement...</span>
+    <div class="recap-paiement" id="recapPaiementBox">
+      <div class="pay-method-icon" id="recapPayIcon">📲</div>
+      <div class="pay-method-name" id="recapPayName">Nita</div>
+      <div class="pay-method-label">Montant à payer</div>
+
+      <div class="montant-box">
+        <div class="montant-label">💰 Montant exact</div>
+        <div class="montant-valeur" id="recapMontant">—</div>
+        <div class="montant-alt" id="recapMontantAlt"></div>
+      </div>
+
+      <div class="adresse-box">
+        <div class="adresse-label" id="recapAdresseLabel">Adresse de paiement</div>
+        <div class="adresse-valeur" id="recapAdresse">—</div>
+        <button class="btn-copier" onclick="copierAdresseRecap(this)">📋 Copier l'adresse</button>
+      </div>
     </div>
 
-    <div class="note-pi">ℹ️ Envoie l'équivalent exact affiché ci-dessus en Pi. Vérifie que tu es sur le <strong>Mainnet Pi</strong>.</div>
-
-    <div class="paiement-bloc"><div class="pay-icon">₿</div><div class="pay-details"><div class="pay-label">Crypto USDT (BEP20)</div><div class="pay-valeur">0x9ae9ec6f753DAb3Cb5A5dB5C51029226647A7187</div></div><button class="btn-copier" onclick="copierTexte('0x9ae9ec6f753DAb3Cb5A5dB5C51029226647A7187', this)">Copier</button></div>
-
-    <button class="btn-whatsapp" onclick="renvoyerWhatsApp()">💬 J'ai payé, envoyer la capture WhatsApp</button>
-  </div>
-</div>
-
-<div class="merci-overlay" id="merciOverlay">
-  <div class="merci-box">
-    <div class="merci-check">✓</div>
-    <h2>Merci pour ta commande ! 🎉</h2>
-    <p class="merci-sub">Ta commande a bien été enregistrée. Il ne reste plus qu'à nous envoyer la preuve de paiement.</p>
-    <div class="merci-recap" id="merciRecap"></div>
-    <div class="merci-etapes">
-      <h4>📋 Prochaines étapes</h4>
-      <div class="merci-etape"><span class="etape-num">1</span><span>Effectue le paiement du montant affiché via Nita, Wave, Pi Network ou USDT.</span></div>
-      <div class="merci-etape"><span class="etape-num">2</span><span>Prends une capture d'écran de la confirmation de paiement.</span></div>
-      <div class="merci-etape"><span class="etape-num">3</span><span>Envoie la capture sur WhatsApp au <strong>+227 99 02 41 62</strong>.</span></div>
-      <div class="merci-etape"><span class="etape-num">4</span><span>Reçois ton PDF par message sous <strong>5 minutes</strong>. 🚀</span></div>
+    <div class="recap-etapes">
+      <strong>⚠️ Important :</strong> après avoir payé le montant exact ci-dessus à l'adresse indiquée, envoie ta capture WhatsApp au <strong>+227 99 02 41 62</strong>. Tu recevras ton PDF sous 5 minutes.
     </div>
-    <button class="btn-whatsapp" onclick="renvoyerWhatsApp()">💬 Envoyer ma capture WhatsApp maintenant</button>
-    <button class="btn-primary" style="background:var(--gris);color:var(--bleu);margin-top:10px;" onclick="fermerMerci()">Fermer</button>
+
+    <button class="btn-whatsapp" onclick="renvoyerWhatsApp()">💬 J'ai payé, envoyer ma capture WhatsApp</button>
+    <button class="btn-primary" style="background:var(--gris);color:var(--bleu);margin-top:10px;" onclick="closeModal('modalRecap')">Fermer</button>
   </div>
 </div>
 
@@ -480,33 +502,47 @@ const CONFIG = {
   whatsappReception: "22799024162"
 };
 
-/* ============================================================
-   PRIX DYNAMIQUE DU PI
-   ============================================================ */
 const TAUX_USD_XOF = 564;
 const COINGECKO_PI_ID = 'pi-network';
 const PRIX_PI_FALLBACK_USD = 0.0945;
-let PRIX_MODULE_EN_COURS_FCFA = 2500;
 
-async function chargerEquivalentPi(){
-  const el = document.getElementById('piAmount');
-  if(!el) return;
-  try {
-    const url = 'https://api.coingecko.com/api/v3/simple/price?ids=' + COINGECKO_PI_ID + '&vs_currencies=usd';
-    const res = await fetch(url, { headers: { 'Accept': 'application/json' } });
-    if(!res.ok) throw new Error('API indisponible');
-    const data = await res.json();
-    const prixPiUSD = data[COINGECKO_PI_ID] && data[COINGECKO_PI_ID].usd;
-    if(!prixPiUSD || prixPiUSD <= 0) throw new Error('Prix invalide');
-    const montantUSD = PRIX_MODULE_EN_COURS_FCFA / TAUX_USD_XOF;
-    const quantitePi = montantUSD / prixPiUSD;
-    el.innerHTML = '<strong>' + quantitePi.toFixed(2) + ' π</strong><small style="display:block;font-size:.7rem;opacity:.85;font-weight:400;">(1 π ≈ $' + prixPiUSD.toFixed(4) + ' · ' + new Date().toLocaleTimeString('fr-FR', {hour:'2-digit', minute:'2-digit'}) + ')</small>';
-  } catch(err) {
-    const montantUSD = PRIX_MODULE_EN_COURS_FCFA / TAUX_USD_XOF;
-    const quantitePi = montantUSD / PRIX_PI_FALLBACK_USD;
-    el.innerHTML = '<strong>' + quantitePi.toFixed(2) + ' π</strong><small style="display:block;font-size:.7rem;opacity:.85;font-weight:400;">(estimation · cours indicatif)</small>';
+const MODES_PAIEMENT = {
+  nita: {
+    nom: "Nita",
+    icon: "📲",
+    label: "Numéro Nita",
+    adresse: "+22799024162",
+    adresseAffichage: "+227 99 02 41 62"
+  },
+  wave: {
+    nom: "Wave",
+    icon: "🌊",
+    label: "Numéro Wave",
+    adresse: "+22799116878",
+    adresseAffichage: "+227 99 11 68 78"
+  },
+  pi: {
+    nom: "Pi Network (PiCoin)",
+    icon: "🥧",
+    label: "Adresse Pi (Mainnet)",
+    adresse: "MANHBPJHHE6A2TNFIXPNBO3YH3PUYPMR5ZPTHKXIKFPVXTWX5YIBQAAAAAAEG5YB4PA52",
+    adresseAffichage: "MANHBPJHHE6A2TNFIXPNBO3YH3PUYPMR5ZPTHKXIKFPVXTWX5YIBQAAAAAAEG5YB4PA52"
+  },
+  usdt: {
+    nom: "USDT (BEP20)",
+    icon: "₿",
+    label: "Adresse USDT BEP20",
+    adresse: "0x9ae9ec6f753DAb3Cb5A5dB5C51029226647A7187",
+    adresseAffichage: "0x9ae9ec6f753DAb3Cb5A5dB5C51029226647A7187"
   }
-}
+};
+
+let formationSelectionnee = '';
+let prixSelectionneFCFA = 2500;
+let prixSelectionneUSD = 5;
+let modePaiementSelectionne = 'nita';
+let adressePaiementActive = '';
+let montantAfficheFinal = '';
 
 /* ============================================================
    CATALOGUE COMPLET — 32 FORMATIONS · 7 DOMAINES
@@ -601,14 +637,14 @@ const CATALOGUE = [
 ];
 
 /* ============================================================
-   RENDU DU CATALOGUE (avec échappement sécurisé)
+   UTILITAIRES
    ============================================================ */
 function formatPrix(prix){
   return prix.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
 }
 
 function escapeHtml(str){
-  return str
+  return String(str)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -616,6 +652,9 @@ function escapeHtml(str){
     .replace(/'/g, '&#39;');
 }
 
+/* ============================================================
+   RENDU DU CATALOGUE
+   ============================================================ */
 function renderCatalogue(filterId){
   filterId = filterId || 'all';
   const container = document.getElementById('catalogue-rendu');
@@ -627,15 +666,15 @@ function renderCatalogue(filterId){
     dom.themes.forEach(function(theme){
       html += '<div class="theme-block"><div class="theme-title">' + escapeHtml(theme.titre) + '</div><div class="produits-grid">';
       theme.produits.forEach(function(p){
-        const titreJS = JSON.stringify(p.titre);
         const titreHtml = escapeHtml(p.titre);
         const descHtml = escapeHtml(p.desc);
+        const titreAttr = titreHtml.replace(/'/g, "\\'");
         html += '<div class="produit-card">';
         html += '<h4>' + titreHtml + '</h4>';
         html += '<p>' + descHtml + '</p>';
         html += '<div class="produit-footer">';
         html += '<div class="prix"><span class="prix-fcfa">' + formatPrix(dom.prix) + ' FCFA</span><span class="prix-usd">soit ~' + dom.prixUSD + '$ USD</span></div>';
-        html += '<button class="btn-acheter" onclick=\'ouvrirCommande(' + titreJS + ', ' + dom.prix + ')\'>Acheter</button>';
+        html += '<button class="btn-acheter" onclick="ouvrirCommande(\'' + titreAttr + '\', ' + dom.prix + ', ' + dom.prixUSD + ')">Acheter</button>';
         html += '</div></div>';
       });
       html += '</div></div>';
@@ -666,21 +705,9 @@ function scrollToDomaine(id){
 /* ============================================================
    MODALES
    ============================================================ */
-let formationSelectionnee = '';
-
-function ouvrirCommande(nomFormation, prix){
-  prix = prix || 2500;
-  formationSelectionnee = nomFormation;
-  PRIX_MODULE_EN_COURS_FCFA = prix;
-  document.getElementById('formation').value = nomFormation;
-  document.getElementById('prixAffiche').value = formatPrix(prix) + ' FCFA';
-  openModal('modalCommande');
-}
-
 function openModal(id){
   document.getElementById(id).classList.add('active');
   document.body.style.overflow = 'hidden';
-  if(id === 'modalPaiement') chargerEquivalentPi();
 }
 
 function closeModal(id){
@@ -702,12 +729,93 @@ document.addEventListener('keydown', function(e){
 });
 
 /* ============================================================
+   COMMANDE
+   ============================================================ */
+function ouvrirCommande(nomFormation, prix, prixUSD){
+  prix = prix || 2500;
+  prixUSD = prixUSD || 5;
+  formationSelectionnee = nomFormation;
+  prixSelectionneFCFA = prix;
+  prixSelectionneUSD = prixUSD;
+  document.getElementById('formation').value = nomFormation;
+  document.getElementById('prixAffiche').value = formatPrix(prix) + ' FCFA (soit ~' + prixUSD + '$)';
+  const radios = document.querySelectorAll('input[name="modePaiement"]');
+  for(let i = 0; i < radios.length; i++) radios[i].checked = false;
+  openModal('modalCommande');
+}
+
+async function validerCommande(e){
+  e.preventDefault();
+
+  const nom = document.getElementById('nom').value.trim();
+  const tel = document.getElementById('whatsapp').value.trim();
+  const email = document.getElementById('email').value.trim();
+
+  const radioChoisi = document.querySelector('input[name="modePaiement"]:checked');
+  if(!radioChoisi){
+    alert('Merci de choisir un mode de paiement.');
+    return;
+  }
+  modePaiementSelectionne = radioChoisi.value;
+  const mode = MODES_PAIEMENT[modePaiementSelectionne];
+
+  document.getElementById('recapNom').textContent = nom;
+  document.getElementById('recapTel').textContent = tel;
+  document.getElementById('recapEmail').textContent = email;
+  document.getElementById('recapFormation').textContent = formationSelectionnee;
+
+  document.getElementById('recapPayIcon').textContent = mode.icon;
+  document.getElementById('recapPayName').textContent = mode.nom;
+  document.getElementById('recapAdresseLabel').textContent = mode.label;
+  document.getElementById('recapAdresse').textContent = mode.adresseAffichage;
+  adressePaiementActive = mode.adresse;
+
+  const boxMontant = document.getElementById('recapMontant');
+  const boxAlt = document.getElementById('recapMontantAlt');
+
+  if(modePaiementSelectionne === 'nita' || modePaiementSelectionne === 'wave'){
+    montantAfficheFinal = formatPrix(prixSelectionneFCFA) + ' FCFA';
+    boxMontant.textContent = montantAfficheFinal;
+    boxAlt.textContent = '≈ ' + prixSelectionneUSD + ' USD';
+  } else if(modePaiementSelectionne === 'usdt'){
+    montantAfficheFinal = prixSelectionneUSD + ' USDT';
+    boxMontant.textContent = montantAfficheFinal;
+    boxAlt.textContent = '≈ ' + formatPrix(prixSelectionneFCFA) + ' FCFA (BEP20 - Binance Smart Chain)';
+  } else if(modePaiementSelectionne === 'pi'){
+    boxMontant.textContent = '⏳ Calcul...';
+    boxAlt.textContent = 'Récupération du cours Pi en direct...';
+    try {
+      const url = 'https://api.coingecko.com/api/v3/simple/price?ids=' + COINGECKO_PI_ID + '&vs_currencies=usd';
+      const res = await fetch(url, { headers: { 'Accept': 'application/json' } });
+      let prixPiUSD = PRIX_PI_FALLBACK_USD;
+      if(res.ok){
+        const data = await res.json();
+        const p = data[COINGECKO_PI_ID] && data[COINGECKO_PI_ID].usd;
+        if(p && p > 0) prixPiUSD = p;
+      }
+      const quantitePi = prixSelectionneUSD / prixPiUSD;
+      montantAfficheFinal = quantitePi.toFixed(2) + ' π';
+      boxMontant.textContent = montantAfficheFinal;
+      boxAlt.textContent = '≈ ' + prixSelectionneUSD + ' USD · 1 π ≈ $' + prixPiUSD.toFixed(4) + ' (cours ' + new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}) + ')';
+    } catch(err){
+      const quantitePi = prixSelectionneUSD / PRIX_PI_FALLBACK_USD;
+      montantAfficheFinal = quantitePi.toFixed(2) + ' π';
+      boxMontant.textContent = montantAfficheFinal;
+      boxAlt.textContent = '≈ ' + prixSelectionneUSD + ' USD · estimation (cours indicatif)';
+    }
+  }
+
+  closeModal('modalCommande');
+  setTimeout(function(){ openModal('modalRecap'); }, 200);
+}
+
+/* ============================================================
    COPIER
    ============================================================ */
 function copierTexte(texte, bouton){
   function ok(){
     const original = bouton.textContent;
-    bouton.textContent = '✓ Copié';
+    bouton.textContent = '✓ Copié !';
     bouton.classList.add('copied');
     setTimeout(function(){
       bouton.textContent = original;
@@ -732,26 +840,8 @@ function fallbackCopy(texte, callback){
   document.body.removeChild(ta);
 }
 
-/* ============================================================
-   VALIDATION FORMULAIRE
-   ============================================================ */
-function validerCommande(e){
-  e.preventDefault();
-  const nom = document.getElementById('nom').value.trim();
-  const tel = document.getElementById('whatsapp').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const prix = document.getElementById('prixAffiche').value;
-  document.getElementById('merciRecap').innerHTML =
-    '<strong>📚 Formation :</strong> ' + escapeHtml(formationSelectionnee) + '<br>' +
-    '<strong>💰 Prix :</strong> ' + escapeHtml(prix) + '<br>' +
-    '<strong>👤 Nom :</strong> ' + escapeHtml(nom) + '<br>' +
-    '<strong>📱 WhatsApp :</strong> ' + escapeHtml(tel) + '<br>' +
-    '<strong>✉️ Email :</strong> ' + escapeHtml(email);
-  closeModal('modalCommande');
-  setTimeout(function(){
-    document.getElementById('merciOverlay').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }, 200);
+function copierAdresseRecap(btn){
+  copierTexte(adressePaiementActive, btn);
 }
 
 /* ============================================================
@@ -761,22 +851,21 @@ function renvoyerWhatsApp(){
   const nom = document.getElementById('nom').value.trim();
   const tel = document.getElementById('whatsapp').value.trim();
   const email = document.getElementById('email').value.trim();
-  const prix = document.getElementById('prixAffiche').value;
+  const mode = MODES_PAIEMENT[modePaiementSelectionne];
+
   const message =
-    'Bonjour, je viens de passer commande pour :\n\n' +
+    'Bonjour, je viens de passer commande :\n\n' +
     '📚 *' + formationSelectionnee + '*\n' +
-    '💰 Prix : ' + prix + '\n\n' +
+    '💰 Prix : ' + formatPrix(prixSelectionneFCFA) + ' FCFA (~' + prixSelectionneUSD + '$)\n' +
+    '💳 Mode de paiement : *' + mode.nom + '*\n' +
+    '🎯 Montant payé : *' + montantAfficheFinal + '*\n\n' +
     '👤 Nom : ' + nom + '\n' +
     '📱 WhatsApp : ' + tel + '\n' +
     '✉️ Email : ' + email + '\n\n' +
     'Voici ma capture de paiement 👇';
+
   const url = 'https://wa.me/' + CONFIG.whatsappReception + '?text=' + encodeURIComponent(message);
   window.open(url, '_blank');
-}
-
-function fermerMerci(){
-  document.getElementById('merciOverlay').classList.remove('active');
-  document.body.style.overflow = '';
 }
 
 /* ============================================================
@@ -852,10 +941,6 @@ document.addEventListener('DOMContentLoaded', function(){
   animerCompteurs();
   initScrollReveal();
   initScrollTop();
-  setInterval(function(){
-    const modal = document.getElementById('modalPaiement');
-    if(modal && modal.classList.contains('active')) chargerEquivalentPi();
-  }, 60000);
 });
 </script>
 
