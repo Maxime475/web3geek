@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web3Geek — 32 Formations PDF pour Gagner de l'Argent en Afrique Francophone</title>
+<meta name="description" content="32 formations PDF pratiques pour gagner de l'argent en ligne en Afrique francophone. Crypto, Business, Finance, WhatsApp, Comptabilité, Maintenance, Python. Livraison WhatsApp sous 5 min.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   VARIABLES GLOBALES
+   ============================================================ */
+:root{
+  --bleu:#0A2540; --bleu-clair:#1a3a5c; --bleu-fonce:#061a2e;
+  --or:#D4AF37; --or-hover:#b8952a; --or-clair:#f0d060;
+  --blanc:#FFFFFF; --gris:#F5F7FA; --gris-bord:#e2e8f0;
+  --texte:#1a202c; --texte-muted:#4a5568; --vert:#25D366;
+  --pi:#8B5CF6; --rouge:#dc2626;
+  --ombre:0 4px 20px rgba(10,37,64,.08);
+  --ombre-hover:0 12px 32px rgba(10,37,64,.16);
+  --ombre-or:0 8px 24px rgba(212,175,55,.35);
+  --radius:12px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',system-ui,-apple-system,sans-serif;color:var(--texte);background:var(--blanc);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+button{font-family:inherit;cursor:pointer;border:none;}
+a{text-decoration:none;color:inherit;}
+
+/* ANIMATIONS */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.7);}50%{box-shadow:0 0 0 6px rgba(34,197,94,0);}}
+@keyframes shimmer{0%{background-position:-1000px 0;}100%{background-position:1000px 0;}}
+@keyframes checkPop{0%{transform:scale(0);}60%{transform:scale(1.15);}100%{transform:scale(1);}}
+@keyframes slideUp{from{transform:translateY(30px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* BARRE VISITEURS */
+.live-bar{background:linear-gradient(90deg,#0A2540,#1a3a5c);color:#fff;padding:8px 16px;font-size:.78rem;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;text-align:center;position:relative;overflow:hidden;}
+.live-bar::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(212,175,55,.1),transparent);animation:shimmer 4s infinite;}
+.live-bar .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:6px;animation:pulse 1.5s infinite;}
+.live-bar strong{color:var(--or);}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--gris-bord);padding:14px 0;box-shadow:0 1px 12px rgba(0,0,0,.04);}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.logo{font-weight:900;font-size:1.15rem;color:var(--bleu);display:flex;align-items:center;gap:8px;letter-spacing:-.02em;}
+.logo span{color:var(--or);}
+.nav-links{display:flex;gap:26px;list-style:none;}
+.nav-links a{font-size:.88rem;font-weight:600;color:var(--texte-muted);transition:color .2s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--or);transition:width .3s;}
+.nav-links a:hover{color:var(--or);}
+.nav-links a:hover::after{width:100%;}
+.btn-wa-header{background:var(--vert);color:#fff;padding:10px 18px;border-radius:50px;font-weight:700;font-size:.85rem;display:flex;align-items:center;gap:6px;transition:transform .2s,box-shadow .2s;}
+.btn-wa-header:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(37,211,102,.4);}
+@media(max-width:768px){.nav-links{display:none;}.logo{font-size:1rem;}}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--bleu-fonce) 0%,var(--bleu) 50%,var(--bleu-clair) 100%);color:#fff;padding:100px 20px 80px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-50%;right:-20%;width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,.18) 0%,transparent 70%);}
+.hero::after{content:'';position:absolute;bottom:-40%;left:-15%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,.12) 0%,transparent 70%);}
+.hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;animation:fadeInUp .8s ease;}
+.hero-badge-top{display:inline-block;background:rgba(212,175,55,.15);border:1px solid var(--or);color:var(--or);padding:8px 20px;border-radius:50px;font-size:.78rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin-bottom:24px;}
+.hero h1{font-size:clamp(2rem,5.5vw,3.4rem);font-weight:900;line-height:1.15;margin-bottom:20px;letter-spacing:-.03em;}
+.hero h1 em{color:var(--or);font-style:normal;display:inline-block;}
+.hero p{font-size:clamp(1rem,2.5vw,1.2rem);color:rgba(255,255,255,.85);margin-bottom:36px;max-width:700px;margin-left:auto;margin-right:auto;}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--or),var(--or-clair));color:var(--bleu);padding:18px 40px;border-radius:50px;font-weight:800;font-size:1.05rem;transition:transform .3s,box-shadow .3s;box-shadow:var(--ombre-or);}
+.hero-cta:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(212,175,55,.5);}
+.hero-cta-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;padding:18px 32px;border-radius:50px;font-weight:700;font-size:1rem;border:2px solid rgba(255,255,255,.3);margin-left:12px;transition:all .3s;}
+.hero-cta-secondary:hover{border-color:var(--or);color:var(--or);}
+.hero-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:44px;font-size:.85rem;color:rgba(255,255,255,.85);}
+.hero-badges span{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);padding:8px 16px;border-radius:50px;border:1px solid rgba(255,255,255,.1);}
+@media(max-width:640px){.hero-cta-secondary{margin-left:0;margin-top:12px;}.hero-cta,.hero-cta-secondary{width:100%;justify-content:center;}}
+
+/* SECTIONS */
+section{padding:80px 20px;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-title{text-align:center;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;color:var(--bleu);margin-bottom:14px;letter-spacing:-.02em;line-height:1.2;}
+.section-title em{color:var(--or);font-style:normal;}
+.section-sub{text-align:center;color:var(--texte-muted);max-width:680px;margin:0 auto 56px;font-size:1rem;line-height:1.6;}
+
+/* STATS */
+.stats{background:var(--gris);padding:48px 20px;}
+.stats-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;text-align:center;}
+.stat-item{background:#fff;border-radius:var(--radius);padding:28px 16px;border:1px solid var(--gris-bord);transition:transform .3s,box-shadow .3s;}
+.stat-item:hover{transform:translateY(-4px);box-shadow:var(--ombre-hover);}
+.stat-item .num{font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:900;color:var(--bleu);display:block;line-height:1;margin-bottom:8px;}
+.stat-item .num span{color:var(--or);}
+.stat-item .label{font-size:.78rem;color:var(--texte-muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em;}
+
+/* DOMAINES */
+.domaines-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+.domaine-card{background:var(--blanc);border:2px solid var(--gris-bord);border-radius:var(--radius);padding:32px 20px;text-align:center;cursor:pointer;transition:all .3s;position:relative;overflow:hidden;}
+.domaine-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--or),var(--or-clair));transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+.domaine-card:hover{border-color:var(--or);transform:translateY(-6px);box-shadow:var(--ombre-hover);}
+.domaine-card:hover::before{transform:scaleX(1);}
+.domaine-icon{font-size:2.6rem;margin-bottom:14px;display:block;transition:transform .3s;}
+.domaine-card:hover .domaine-icon{transform:scale(1.15);}
+.domaine-card h3{font-size:.95rem;font-weight:800;color:var(--bleu);margin-bottom:6px;line-height:1.3;}
+.domaine-card p{font-size:.8rem;color:var(--texte-muted);}
+.domaine-card .mini-prix{margin-top:10px;font-size:.72rem;font-weight:800;color:var(--or);letter-spacing:.02em;}
+
+/* CATALOGUE */
+.catalog{background:var(--gris);}
+.catalog-toolbar{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:48px;}
+.filter-btn{background:#fff;border:2px solid var(--gris-bord);color:var(--texte-muted);padding:10px 20px;border-radius:50px;font-weight:700;font-size:.82rem;transition:all .2s;cursor:pointer;}
+.filter-btn:hover{border-color:var(--or);color:var(--or);}
+.filter-btn.active{background:var(--bleu);border-color:var(--bleu);color:#fff;}
+.domaine-block{margin-bottom:64px;scroll-margin-top:80px;}
+.domaine-header{display:flex;align-items:center;gap:16px;margin-bottom:32px;padding-bottom:18px;border-bottom:3px solid var(--or);flex-wrap:wrap;}
+.domaine-header .icon{font-size:2.2rem;}
+.domaine-header h3{font-size:clamp(1.2rem,2.8vw,1.7rem);font-weight:900;color:var(--bleu);letter-spacing:-.02em;}
+.domaine-header .prix-domaine{margin-left:auto;background:linear-gradient(135deg,var(--or),var(--or-clair));color:var(--bleu);padding:8px 18px;border-radius:50px;font-size:.78rem;font-weight:900;letter-spacing:.02em;white-space:nowrap;box-shadow:0 4px 12px rgba(212,175,55,.3);}
+.theme-block{margin-bottom:36px;}
+.theme-title{font-size:.9rem;font-weight:800;color:var(--or);text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.theme-title::before{content:'';width:24px;height:2px;background:var(--or);}
+.produits-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
+.produit-card{background:var(--blanc);border-radius:var(--radius);padding:24px;box-shadow:var(--ombre);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s;border:1px solid var(--gris-bord);position:relative;}
+.produit-card:hover{transform:translateY(-6px);box-shadow:var(--ombre-hover);border-color:var(--or);}
+.produit-card::before{content:'PDF';position:absolute;top:14px;right:14px;background:var(--rouge);color:#fff;font-size:.6rem;font-weight:900;padding:3px 8px;border-radius:4px;letter-spacing:.05em;}
+.produit-card h4{font-size:.98rem;font-weight:800;color:var(--bleu);margin-bottom:12px;line-height:1.4;padding-right:40px;}
+.produit-card p{font-size:.83rem;color:var(--texte-muted);flex-grow:1;margin-bottom:18px;line-height:1.55;}
+.produit-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px dashed var(--gris-bord);}
+.prix{font-size:1.05rem;font-weight:900;color:var(--bleu);white-space:nowrap;line-height:1.2;}
+.prix .prix-fcfa{color:var(--bleu);}
+.prix .prix-usd{display:block;font-size:.72rem;color:var(--or);font-weight:800;margin-top:3px;letter-spacing:.02em;}
+.btn-acheter{background:linear-gradient(135deg,var(--or),var(--or-clair));color:var(--bleu);padding:11px 18px;border-radius:8px;font-weight:800;font-size:.78rem;transition:all .2s;white-space:nowrap;box-shadow:0 4px 12px rgba(212,175,55,.25);}
+.btn-acheter:hover{background:var(--or-hover);transform:translateY(-2px);box-shadow:0 6px 16px rgba(212,175,55,.4);}
+
+/* TÉMOIGNAGES */
+.temoignages{background:var(--blanc);}
+.temoignages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
+.temoignage{background:var(--gris);border-radius:var(--radius);padding:28px;position:relative;border-left:4px solid var(--or);transition:transform .3s,box-shadow .3s;}
+.temoignage:hover{transform:translateY(-4px);box-shadow:var(--ombre-hover);}
+.temoignage::before{content:'"';position:absolute;top:12px;right:24px;font-size:5rem;color:var(--or);opacity:.15;font-family:Georgia,serif;line-height:1;}
+.temoignage-stars{color:var(--or);font-size:1rem;margin-bottom:12px;letter-spacing:2px;}
+.temoignage-texte{font-size:.9rem;color:var(--texte-muted);line-height:1.7;margin-bottom:20px;font-style:italic;}
+.temoignage-auteur{display:flex;align-items:center;gap:14px;}
+.temoignage-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--bleu),var(--or));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;flex-shrink:0;}
+.temoignage-info strong{display:block;font-size:.9rem;color:var(--bleu);font-weight:800;}
+.temoignage-info span{font-size:.78rem;color:var(--texte-muted);}
+
+/* CONFIANCE */
+.confiance{background:var(--gris);}
+.confiance-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;}
+.confiance-item{text-align:center;padding:32px 24px;background:#fff;border-radius:var(--radius);border:1px solid var(--gris-bord);transition:transform .3s,box-shadow .3s;}
+.confiance-item:hover{transform:translateY(-4px);box-shadow:var(--ombre-hover);}
+.confiance-icon{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--or),var(--or-clair));display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 18px;box-shadow:0 8px 20px rgba(212,175,55,.3);}
+.confiance-item h4{font-size:.95rem;font-weight:800;color:var(--bleu);margin-bottom:10px;}
+.confiance-item p{font-size:.85rem;color:var(--texte-muted);line-height:1.55;}
+
+/* FAQ */
+.faq-item{background:var(--blanc);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;border:1px solid var(--gris-bord);transition:box-shadow .2s;}
+.faq-item:hover{box-shadow:var(--ombre);}
+.faq-question{width:100%;text-align:left;padding:20px 24px;background:none;font-size:.95rem;font-weight:700;color:var(--bleu);display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background .2s;}
+.faq-question:hover{background:#fafbfc;}
+.faq-question .chevron{transition:transform .3s;font-size:1.2rem;color:var(--or);flex-shrink:0;}
+.faq-item.open .chevron{transform:rotate(180deg);}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.faq-answer-inner{padding:0 24px 20px;font-size:.88rem;color:var(--texte-muted);line-height:1.7;}
+.faq-item.open .faq-answer{max-height:400px;}
+
+/* CTA FINAL */
+.cta-final{background:linear-gradient(135deg,var(--bleu-fonce) 0%,var(--bleu) 100%);color:#fff;text-align:center;padding:80px 20px;position:relative;overflow:hidden;}
+.cta-final::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,.15) 0%,transparent 70%);}
+.cta-final-inner{max-width:700px;margin:0 auto;position:relative;z-index:1;}
+.cta-final h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;margin-bottom:16px;letter-spacing:-.02em;}
+.cta-final h2 em{color:var(--or);font-style:normal;}
+.cta-final p{color:rgba(255,255,255,.85);font-size:1rem;margin-bottom:32px;}
+
+/* FOOTER */
+footer{background:var(--bleu-fonce);color:rgba(255,255,255,.8);padding:56px 20px 28px;font-size:.85rem;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px;margin-bottom:36px;}
+.footer-col h4{color:var(--or);font-size:.9rem;margin-bottom:16px;font-weight:800;letter-spacing:.03em;}
+.footer-col p,.footer-col a{color:rgba(255,255,255,.65);margin-bottom:10px;display:block;transition:color .2s;font-size:.85rem;}
+.footer-col a:hover{color:var(--or);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;text-align:center;font-size:.78rem;color:rgba(255,255,255,.4);}
+
+/* MODALES */
+.modal-overlay{position:fixed;inset:0;background:rgba(10,37,64,.75);backdrop-filter:blur(6px);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto;}
+.modal-overlay.active{display:flex;animation:fadeIn .25s ease;}
+.modal{background:#fff;border-radius:18px;max-width:500px;width:100%;padding:36px 32px;position:relative;animation:slideUp .35s ease;max-height:92vh;overflow-y:auto;box-shadow:0 24px 60px rgba(0,0,0,.4);}
+.modal-close{position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:50%;background:var(--gris);color:var(--texte-muted);font-size:1.3rem;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.modal-close:hover{background:#e2e8f0;transform:rotate(90deg);}
+.modal h3{font-size:1.35rem;color:var(--bleu);font-weight:900;margin-bottom:10px;padding-right:44px;letter-spacing:-.01em;}
+.modal-sub{font-size:.85rem;color:var(--texte-muted);margin-bottom:26px;line-height:1.55;}
+.form-group{margin-bottom:18px;}
+.form-group label{display:block;font-size:.8rem;font-weight:700;color:var(--bleu);margin-bottom:8px;letter-spacing:.02em;}
+.form-group input{width:100%;padding:13px 16px;border:2px solid var(--gris-bord);border-radius:10px;font-size:.9rem;font-family:inherit;color:var(--texte);transition:border-color .2s,box-shadow .2s;background:#fff;}
+.form-group input:focus{outline:none;border-color:var(--or);box-shadow:0 0 0 3px rgba(212,175,55,.15);}
+.form-group input[readonly]{background:var(--gris);color:var(--texte-muted);cursor:not-allowed;}
+.btn-primary{width:100%;background:linear-gradient(135deg,var(--or),var(--or-clair));color:var(--bleu);padding:15px;border-radius:10px;font-weight:900;font-size:.95rem;transition:all .2s;margin-top:8px;box-shadow:0 6px 16px rgba(212,175,55,.3);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(212,175,55,.45);}
+.btn-whatsapp{width:100%;background:var(--vert);color:#fff;padding:15px;border-radius:10px;font-weight:900;font-size:.95rem;transition:all .2s;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 6px 16px rgba(37,211,102,.3);}
+.btn-whatsapp:hover{background:#1eb955;transform:translateY(-2px);box-shadow:0 10px 24px rgba(37,211,102,.45);}
+
+/* PAIEMENT */
+.paiement-info{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:16px 18px;margin-bottom:18px;font-size:.82rem;color:#78350f;line-height:1.6;}
+.paiement-info strong{color:#78350f;}
+.paiement-bloc{background:var(--gris);border-radius:12px;padding:14px 16px;margin-bottom:12px;display:flex;align-items:center;gap:14px;border-left:4px solid var(--or);position:relative;}
+.paiement-bloc.pi-bloc{border-left-color:var(--pi);background:linear-gradient(135deg,#f5f3ff 0%,#ede9fe 100%);}
+.paiement-bloc.pi-bloc .pay-label{color:var(--pi);}
+.paiement-bloc.pi-bloc .pay-valeur{color:#5b21b6;}
+.paiement-bloc .pay-icon{font-size:1.6rem;flex-shrink:0;}
+.paiement-bloc .pay-details{flex-grow:1;min-width:0;}
+.paiement-bloc .pay-label{font-size:.7rem;font-weight:800;color:var(--texte-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px;}
+.paiement-bloc .pay-valeur{font-size:.88rem;font-weight:700;color:var(--bleu);word-break:break-all;font-family:'Courier New',monospace;}
+.btn-copier{background:var(--or);color:var(--bleu);padding:9px 14px;border-radius:8px;font-size:.72rem;font-weight:800;white-space:nowrap;flex-shrink:0;transition:all .2s;}
+.btn-copier:hover{background:var(--or-hover);transform:scale(1.05);}
+.btn-copier.copied{background:#22c55e;color:#fff;}
+.note-pi{background:#f5f3ff;border:1px solid #ddd6fe;border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:.75rem;color:#5b21b6;line-height:1.55;}
+
+/* ÉQUIVALENT PI */
+.pi-equivalent{background:linear-gradient(135deg,#8B5CF6,#6D28D9);color:#fff;border-radius:10px;padding:14px 16px;margin-bottom:14px;font-size:.85rem;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;box-shadow:0 6px 16px rgba(139,92,246,.3);}
+.pi-equivalent .pi-amount{font-size:1.15rem;font-weight:900;font-family:'Courier New',monospace;}
+
+/* MERCI */
+.merci-overlay{position:fixed;inset:0;background:rgba(10,37,64,.95);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto;}
+.merci-overlay.active{display:flex;animation:fadeIn .3s ease;}
+.merci-box{background:#fff;border-radius:20px;max-width:540px;width:100%;padding:44px 36px;text-align:center;position:relative;animation:slideUp .4s ease;box-shadow:0 24px 80px rgba(0,0,0,.5);}
+.merci-check{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,#22c55e,#16a34a);display:flex;align-items:center;justify-content:center;font-size:2.7rem;color:#fff;margin:0 auto 26px;animation:checkPop .5s ease;box-shadow:0 8px 24px rgba(34,197,94,.4);}
+.merci-box h2{font-size:1.7rem;color:var(--bleu);font-weight:900;margin-bottom:14px;letter-spacing:-.02em;}
+.merci-box .merci-sub{font-size:.95rem;color:var(--texte-muted);line-height:1.65;margin-bottom:26px;}
+.merci-etapes{text-align:left;background:var(--gris);border-radius:14px;padding:24px;margin-bottom:26px;}
+.merci-etapes h4{font-size:.85rem;font-weight:800;color:var(--bleu);text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px;}
+.merci-etape{display:flex;gap:14px;margin-bottom:16px;font-size:.85rem;color:var(--texte-muted);line-height:1.6;}
+.merci-etape:last-child{margin-bottom:0;}
+.merci-etape .etape-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--or);color:var(--bleu);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.8rem;}
+.merci-recap{background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:16px;margin-bottom:22px;font-size:.82rem;color:#1e40af;text-align:left;line-height:1.7;}
+.merci-recap strong{color:#1e3a8a;}
+
+/* SCROLL TOP */
+.scroll-top{position:fixed;bottom:24px;right:24px;width:50px;height:50px;border-radius:50%;background:var(--or);color:var(--bleu);font-size:1.3rem;display:none;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(212,175,55,.4);z-index:99;transition:transform .2s;}
+.scroll-top:hover{transform:translateY(-4px) scale(1.05);}
+.scroll-top.visible{display:flex;animation:fadeInUp .3s ease;}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  section{padding:56px 16px;}
+  .hero{padding:72px 16px 60px;}
+  .hero-cta{padding:15px 28px;font-size:.95rem;}
+  .modal{padding:32px 22px;border-radius:16px;}
+  .produit-footer{flex-direction:column;align-items:stretch;}
+  .btn-acheter{text-align:center;padding:13px;font-size:.82rem;}
+  .merci-box{padding:36px 24px;border-radius:16px;}
+  .merci-box h2{font-size:1.4rem;}
+  .paiement-bloc{flex-wrap:wrap;}
+  .btn-copier{width:100%;margin-top:8px;}
+  .domaine-header{flex-wrap:wrap;}
+  .domaine-header .prix-domaine{margin-left:0;width:100%;text-align:center;margin-top:8px;}
+}
+</style>
+</head>
+<body>
+
+<div class="live-bar">
+  <span><span class="dot"></span><strong id="visiteurs">154</strong> personnes consultent le site</span>
+  <span>🔥 <strong id="ventes">132</strong> formations vendues</span>
+</div>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">📚 Web3<span>Geek</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#domaines">Domaines</a></li>
+        <li><a href="#catalogue">Catalogue</a></li>
+        <li><a href="#temoignages">Avis</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a href="https://wa.me/22799024162" class="btn-wa-header" target="_blank" rel="noopener">💬 WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge-top">🔥 32 Formations · 7 Domaines</div>
+    <h1>Formations Digitales à <em>Télécharger Immédiatement</em></h1>
+    <p>32 guides PDF pratiques pour gagner de l'argent en ligne en Afrique francophone. Livraison WhatsApp sous 5 min.</p>
+    <a href="#catalogue" class="hero-cta">📥 Voir les formations</a>
+    <a href="https://wa.me/22799024162" class="hero-cta-secondary" target="_blank" rel="noopener">💬 Poser une question</a>
+    <div class="hero-badges">
+      <span>✅ Nita / Wave / Pi / Crypto</span>
+      <span>⚡ Livraison sous 5 min</span>
+      <span>📱 100% mobile</span>
+      <span>🎁 3 modules ou plus = tarif réduit</span>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat-item"><span class="num">32</span><span class="label">Formations PDF</span></div>
+    <div class="stat-item"><span class="num">7</span><span class="label">Domaines couverts</span></div>
+    <div class="stat-item"><span class="num">132<span>+</span></span><span class="label">Clients satisfaits</span></div>
+    <div class="stat-item"><span class="num">4.9<span>/5</span></span><span class="label">Note moyenne</span></div>
+  </div>
+</section>
+
+<section id="domaines">
+  <div class="section-inner reveal">
+    <h2 class="section-title">7 Domaines à <em>Forte Demande</em> en 2026</h2>
+    <p class="section-sub">Choisis ton domaine et découvre les formations concrètes pour passer à l'action.</p>
+    <div class="domaines-grid">
+      <div class="domaine-card" onclick="scrollToDomaine('crypto')"><span class="domaine-icon">🪙</span><h3>Crypto & Pi Network</h3><p>6 formations</p><div class="mini-prix">À partir de 2500 FCFA</div></div>
+      <div class="domaine-card" onclick="scrollToDomaine('business')"><span class="domaine-icon">💼</span><h3>Business en Ligne Afrique</h3><p>6 formations</p><div class="mini-prix">À partir de 2500 FCFA</div></div>
+      <div class="domaine-card" onclick="scrollToDomaine('finance')"><span class="domaine-icon">💰</span><h3>Argent & Finance Personnelle</h3><p>6 formations</p><div class="mini-prix">À partir de 5000 FCFA</div></div>
+      <div class="domaine-card" onclick="scrollToDomaine('whatsapp')"><span class="domaine-icon">📱</span><h3>Marketing WhatsApp</h3><p>6 formations</p><div class="mini-prix">À partir de 2500 FCFA</div></div>
+      <div class="domaine-card" onclick="scrollToDomaine('avance')"><span class="domaine-icon">🎁</span><h3>Business & Finance Avancé</h3><p>5 formations</p><div class="mini-prix">À partir de 10000 FCFA</div></div>
+      <div class="domaine-card" onclick="scrollToDomaine('tech')"><span class="domaine-icon">🛠️</span><h3>Technique & Maintenance</h3><p>2 formations</p><div class="mini-prix">À partir de 25000 FCFA</div></div>
+      <div class="domaine-card" onclick="scrollToDomaine('prog')"><span class="domaine-icon">🐍</span><h3>Programmation</h3><p>1 formation</p><div class="mini-prix">À partir de 5000 FCFA</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="catalog" id="catalogue">
+  <div class="section-inner reveal">
+    <h2 class="section-title">Catalogue Complet — <em>32 Formations PDF</em></h2>
+    <p class="section-sub">Chaque formation a son prix selon son domaine. Paiement mobile money, Pi Network, ou crypto. Livraison WhatsApp sous 5 min.</p>
+    <div class="catalog-toolbar">
+      <button class="filter-btn active" onclick="filtrer('all', this)">Tous</button>
+      <button class="filter-btn" onclick="filtrer('crypto', this)">🪙 Crypto</button>
+      <button class="filter-btn" onclick="filtrer('business', this)">💼 Business</button>
+      <button class="filter-btn" onclick="filtrer('finance', this)">💰 Finance</button>
+      <button class="filter-btn" onclick="filtrer('whatsapp', this)">📱 WhatsApp</button>
+      <button class="filter-btn" onclick="filtrer('avance', this)">🎁 Avancé</button>
+      <button class="filter-btn" onclick="filtrer('tech', this)">🛠️ Technique</button>
+      <button class="filter-btn" onclick="filtrer('prog', this)">🐍 Python</button>
+    </div>
+    <div id="catalogue-rendu"></div>
+  </div>
+</section>
+
+<section class="temoignages" id="temoignages">
+  <div class="section-inner reveal">
+    <h2 class="section-title">Ils Ont Déjà <em>Téléchargé et Gagné</em></h2>
+    <p class="section-sub">Découvre ce que disent nos clients à travers l'Afrique francophone.</p>
+    <div class="temoignages-grid">
+      <div class="temoignage">
+        <div class="temoignage-stars">★★★★★</div>
+        <p class="temoignage-texte">Grâce au module Pi Network, j'ai compris comment sécuriser mon compte et j'ai enfin pu vendre mes premiers Pi. J'ai récupéré 45 000 FCFA en une semaine.</p>
+        <div class="temoignage-auteur"><div class="temoignage-avatar">AD</div><div class="temoignage-info"><strong>Amadou Diallo</strong><span>Niamey, Niger</span></div></div>
+      </div>
+      <div class="temoignage">
+        <div class="temoignage-stars">★★★★★</div>
+        <p class="temoignage-texte">J'ai commencé avec 0 FCFA grâce au guide 20 Business à 0F. Aujourd'hui je fais 150 000 FCFA/mois en vendant des services WhatsApp.</p>
+        <div class="temoignage-auteur"><div class="temoignage-avatar">FK</div><div class="temoignage-info"><strong>Fatoumata Kouyaté</strong><span>Bamako, Mali</span></div></div>
+      </div>
+      <div class="temoignage">
+        <div class="temoignage-stars">★★★★★</div>
+        <p class="temoignage-texte">J'ai payé en Pi Network, c'était simple et rapide. Le guide WhatsApp a transformé ma boutique : 3x plus de ventes en 2 semaines.</p>
+        <div class="temoignage-auteur"><div class="temoignage-avatar">IS</div><div class="temoignage-info"><strong>Ibrahim Sow</strong><span>Dakar, Sénégal</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="confiance" id="confiance">
+  <div class="section-inner reveal">
+    <h2 class="section-title">Pourquoi Nous <em>Faire Confiance</em> ?</h2>
+    <p class="section-sub">Des centaines de clients satisfaits à travers l'Afrique francophone.</p>
+    <div class="confiance-grid">
+      <div class="confiance-item"><div class="confiance-icon">🔒</div><h4>Paiement Local & Pi Sécurisé</h4><p>Nita, Wave, Pi Network et Crypto USDT acceptés. Transactions vérifiées.</p></div>
+      <div class="confiance-item"><div class="confiance-icon">⚡</div><h4>Livraison en 5 Minutes</h4><p>Envoie ta capture WhatsApp et reçois ton PDF immédiatement.</p></div>
+      <div class="confiance-item"><div class="confiance-icon">📖</div><h4>Contenu Vérifié & Actionnable</h4><p>Guides pratiques testés sur le terrain africain. Zéro blabla.</p></div>
+      <div class="confiance-item"><div class="confiance-icon">💬</div><h4>Support WhatsApp 7j/7</h4><p>Une question ? Une réponse en moins de 30 minutes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="section-inner reveal">
+    <h2 class="section-title">Questions <em>Fréquentes</em></h2>
+    <p class="section-sub">Tout ce que tu dois savoir avant de commander.</p>
+    <div class="faq-item"><button class="faq-question">Comment se passe le paiement ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">Tu choisis ta formation, tu remplis le formulaire, puis tu paies le prix affiché (en FCFA ou en Pi/Crypto équivalent) via Nita, Wave, Pi Network ou Crypto USDT (BEP20). Ensuite tu envoies ta capture WhatsApp et tu reçois ton PDF sous 5 min.</div></div></div>
+    <div class="faq-item"><button class="faq-question">Pourquoi les prix varient selon les domaines ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">Chaque domaine a son niveau de complexité et sa valeur. Crypto, Business et WhatsApp sont accessibles à partir de 2500 FCFA. Finance et Python sont à 5000 FCFA. Business avancé à 10000 FCFA. Technique/Maintenance à 25000 FCFA.</div></div></div>
+    <div class="faq-item"><button class="faq-question">Comment payer en Pi Network (PiCoin) ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">Ouvre ton Wallet Pi, clique sur Envoyer, colle l'adresse Pi affichée, saisis l'équivalent en Pi affiché en temps réel sur cette page, puis valide. Vérifie toujours que tu es bien sur le Mainnet Pi avant de valider.</div></div></div>
+    <div class="faq-item"><button class="faq-question">Puis-je acheter plusieurs modules d'un coup ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">Oui. Tu peux commander plusieurs formations. Pour 3 modules ou plus, contacte-nous sur WhatsApp : nous t'offrons un tarif réduit.</div></div></div>
+    <div class="faq-item"><button class="faq-question">Comment je reçois mon PDF ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">Après avoir envoyé ta capture de paiement sur WhatsApp, notre équipe vérifie et t'envoie le lien de téléchargement directement en message privé sous 5 minutes.</div></div></div>
+    <div class="faq-item"><button class="faq-question">Y a-t-il un remboursement ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">S'agissant de produits numériques livrés instantanément, aucun remboursement n'est possible après réception du PDF. En revanche, si tu ne reçois rien, tu es remboursé à 100%.</div></div></div>
+    <div class="faq-item"><button class="faq-question">Puis-je revendre ces formations ?<span class="chevron">⌄</span></button><div class="faq-answer"><div class="faq-answer-inner">Non, les PDF sont protégés par droits d'auteur. Toute revente ou partage est interdit. Une licence revendeur est disponible séparément — contacte-nous sur WhatsApp.</div></div></div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="cta-final-inner reveal">
+    <h2>Prêt à <em>passer à l'action</em> ?</h2>
+    <p>Rejoins les centaines d'Africains qui gagnent de l'argent en ligne grâce à Web3Geek.</p>
+    <a href="#catalogue" class="hero-cta">📥 Voir les 32 formations</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>📚 Web3Geek</h4><p>32 guides PDF pratiques pour gagner de l'argent en Afrique francophone.</p></div>
+      <div class="footer-col"><h4>Contact</h4><a href="https://wa.me/22799024162" target="_blank">💬 WhatsApp : +227 99 02 41 62</a><a href="mailto:0007akader@gmail.com">✉️ 0007akader@gmail.com</a></div>
+      <div class="footer-col"><h4>Paiement accepté</h4><p>📲 Nita : +227 99 02 41 62</p><p>🌊 Wave : +227 99 11 68 78</p><p>🥧 Pi Network (PiCoin)</p><p>₿ USDT (BEP20)</p></div>
+    </div>
+    <div class="footer-bottom">© 2026 Web3Geek — Tous droits réservés.</div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modalCommande">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modalCommande')" aria-label="Fermer">✕</button>
+    <h3>📝 Formulaire de Commande</h3>
+    <p class="modal-sub">Remplis tes informations puis passe au paiement.</p>
+    <form id="formCommande" onsubmit="validerCommande(event)">
+      <div class="form-group"><label for="nom">Nom complet *</label><input type="text" id="nom" required placeholder="Ex : Amadou Diallo"></div>
+      <div class="form-group"><label for="whatsapp">Numéro WhatsApp *</label><input type="tel" id="whatsapp" required placeholder="+227 90 00 00 00"></div>
+      <div class="form-group"><label for="email">Email *</label><input type="email" id="email" required placeholder="ton@email.com"></div>
+      <div class="form-group"><label for="formation">Formation choisie</label><input type="text" id="formation" readonly></div>
+      <div class="form-group"><label for="prixAffiche">Prix</label><input type="text" id="prixAffiche" readonly></div>
+      <button type="submit" class="btn-primary">Valider ma commande →</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modalPaiement">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modalPaiement')" aria-label="Fermer">✕</button>
+    <h3>💳 Modalités de Paiement</h3>
+    <p class="modal-sub">Paie le montant affiché via l'un des moyens ci-dessous.</p>
+    <div class="paiement-info">⚠️ <strong>Important :</strong> après paiement, envoie ta capture WhatsApp au <strong>+227 99 02 41 62</strong>. Tu recevras ton PDF sous 5 minutes.</div>
+
+    <div class="paiement-bloc"><div class="pay-icon">📲</div><div class="pay-details"><div class="pay-label">Nita</div><div class="pay-valeur">+227 99 02 41 62</div></div><button class="btn-copier" onclick="copierTexte('+22799024162', this)">Copier</button></div>
+    <div class="paiement-bloc"><div class="pay-icon">🌊</div><div class="pay-details"><div class="pay-label">Wave</div><div class="pay-valeur">+227 99 11 68 78</div></div><button class="btn-copier" onclick="copierTexte('+22799116878', this)">Copier</button></div>
+
+    <div class="paiement-bloc pi-bloc">
+      <div class="pay-icon">🥧</div>
+      <div class="pay-details"><div class="pay-label">Pi Network (PiCoin)</div><div class="pay-valeur">MANHBPJHHE6A2TNFIXPNBO3YH3PUYPMR5ZPTHKXIKFPVXTWX5YIBQAAAAAAEG5YB4PA52</div></div>
+      <button class="btn-copier" onclick="copierTexte('MANHBPJHHE6A2TNFIXPNBO3YH3PUYPMR5ZPTHKXIKFPVXTWX5YIBQAAAAAAEG5YB4PA52', this)">Copier</button>
+    </div>
+
+    <div class="pi-equivalent" id="piEquivalent">
+      <span>💱 Équivalent à payer :</span>
+      <span class="pi-amount" id="piAmount">⏳ Chargement...</span>
+    </div>
+
+    <div class="note-pi">ℹ️ Envoie l'équivalent exact affiché ci-dessus en Pi. Vérifie que tu es sur le <strong>Mainnet Pi</strong>.</div>
+
+    <div class="paiement-bloc"><div class="pay-icon">₿</div><div class="pay-details"><div class="pay-label">Crypto USDT (BEP20)</div><div class="pay-valeur">0x9ae9ec6f753DAb3Cb5A5dB5C51029226647A7187</div></div><button class="btn-copier" onclick="copierTexte('0x9ae9ec6f753DAb3Cb5A5dB5C51029226647A7187', this)">Copier</button></div>
+
+    <button class="btn-whatsapp" onclick="renvoyerWhatsApp()">💬 J'ai payé, envoyer la capture WhatsApp</button>
+  </div>
+</div>
+
+<div class="merci-overlay" id="merciOverlay">
+  <div class="merci-box">
+    <div class="merci-check">✓</div>
+    <h2>Merci pour ta commande ! 🎉</h2>
+    <p class="merci-sub">Ta commande a bien été enregistrée. Il ne reste plus qu'à nous envoyer la preuve de paiement.</p>
+    <div class="merci-recap" id="merciRecap"></div>
+    <div class="merci-etapes">
+      <h4>📋 Prochaines étapes</h4>
+      <div class="merci-etape"><span class="etape-num">1</span><span>Effectue le paiement du montant affiché via Nita, Wave, Pi Network ou USDT.</span></div>
+      <div class="merci-etape"><span class="etape-num">2</span><span>Prends une capture d'écran de la confirmation de paiement.</span></div>
+      <div class="merci-etape"><span class="etape-num">3</span><span>Envoie la capture sur WhatsApp au <strong>+227 99 02 41 62</strong>.</span></div>
+      <div class="merci-etape"><span class="etape-num">4</span><span>Reçois ton PDF par message sous <strong>5 minutes</strong>. 🚀</span></div>
+    </div>
+    <button class="btn-whatsapp" onclick="renvoyerWhatsApp()">💬 Envoyer ma capture WhatsApp maintenant</button>
+    <button class="btn-primary" style="background:var(--gris);color:var(--bleu);margin-top:10px;" onclick="fermerMerci()">Fermer</button>
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Retour en haut">↑</button>
+
+<script>
+/* ============================================================
+   CONFIGURATION GLOBALE
+   ============================================================ */
+const CONFIG = {
+  whatsappReception: "22799024162"
+};
+
+/* ============================================================
+   PRIX DYNAMIQUE DU PI
+   ============================================================ */
+const TAUX_USD_XOF = 564;
+const COINGECKO_PI_ID = 'pi-network';
+const PRIX_PI_FALLBACK_USD = 0.0945;
+let PRIX_MODULE_EN_COURS_FCFA = 2500;
+
+async function chargerEquivalentPi(){
+  const el = document.getElementById('piAmount');
+  if(!el) return;
+  try {
+    const url = 'https://api.coingecko.com/api/v3/simple/price?ids=' + COINGECKO_PI_ID + '&vs_currencies=usd';
+    const res = await fetch(url, { headers: { 'Accept': 'application/json' } });
+    if(!res.ok) throw new Error('API indisponible');
+    const data = await res.json();
+    const prixPiUSD = data[COINGECKO_PI_ID] && data[COINGECKO_PI_ID].usd;
+    if(!prixPiUSD || prixPiUSD <= 0) throw new Error('Prix invalide');
+    const montantUSD = PRIX_MODULE_EN_COURS_FCFA / TAUX_USD_XOF;
+    const quantitePi = montantUSD / prixPiUSD;
+    el.innerHTML = '<strong>' + quantitePi.toFixed(2) + ' π</strong><small style="display:block;font-size:.7rem;opacity:.85;font-weight:400;">(1 π ≈ $' + prixPiUSD.toFixed(4) + ' · ' + new Date().toLocaleTimeString('fr-FR', {hour:'2-digit', minute:'2-digit'}) + ')</small>';
+  } catch(err) {
+    const montantUSD = PRIX_MODULE_EN_COURS_FCFA / TAUX_USD_XOF;
+    const quantitePi = montantUSD / PRIX_PI_FALLBACK_USD;
+    el.innerHTML = '<strong>' + quantitePi.toFixed(2) + ' π</strong><small style="display:block;font-size:.7rem;opacity:.85;font-weight:400;">(estimation · cours indicatif)</small>';
+  }
+}
+
+/* ============================================================
+   CATALOGUE COMPLET — 32 FORMATIONS · 7 DOMAINES
+   ============================================================ */
+const CATALOGUE = [
+  { id:"crypto", domaine:"Crypto & Pi Network", icon:"🪙", prix:2500, prixUSD:5, themes:[
+    { titre:"Débuter et Sécuriser", produits:[
+      { titre:"Pi Network 2026 : Le Guide Complet de A à Z", desc:"Comprendre l Open Network, sécuriser ton compte, éviter les arnaques et savoir quoi faire de tes Pi." },
+      { titre:"Les 10 Erreurs qui Font Perdre des Cryptos aux Débutants", desc:"Phrase secrète, arnaques, faux échanges. Protège tes actifs dès aujourd hui." }
+    ]},
+    { titre:"Gagner et Utiliser", produits:[
+      { titre:"Comment Trouver des Acheteurs et Vendeurs Pi en Toute Sécurité", desc:"Méthode P2P fiable au Niger et en Afrique. Éviter les arnaques et bien fixer son prix." },
+      { titre:"15 Applications Pi Utiles à Connaître en 2026", desc:"Découvre l écosystème Pi. Où dépenser et utiliser tes Pi dans la vraie vie." }
+    ]},
+    { titre:"Stratégie", produits:[
+      { titre:"Vendre, Garder ou Dépenser ? La Stratégie Pi pour les 5 Prochaines Années", desc:"Analyse simple pour prendre la meilleure décision selon ton profil." },
+      { titre:"Devenir un Leader Pi : Animer et Monétiser une Communauté", desc:"Comment j ai construit un groupe de 1000+ personnes autour de Pi." }
+    ]}
+  ]},
+
+  { id:"business", domaine:"Business en Ligne Afrique", icon:"💼", prix:2500, prixUSD:5, themes:[
+    { titre:"Démarrer à 0F", produits:[
+      { titre:"20 Business à 0F de Capital qui Rapportent au Niger", desc:"Idées concrètes, outils gratuits, et plan d action pour démarrer cette semaine." },
+      { titre:"L Intermédiaire Digital : Gagner 100k à 500k/mois sans Produit", desc:"La méthode du connecteur. Vends terrain, voiture, services et prends ta commission." }
+    ]},
+    { titre:"Vente et Service", produits:[
+      { titre:"Gestion WhatsApp Pro pour Commerçants : 50 000 FCFA/mois par client", desc:"Le service que tout vendeur cherche. Script, organisation, et comment trouver tes clients." },
+      { titre:"Créer et Vendre des Services sur Facebook et WhatsApp", desc:"Graphisme, rédaction, montage. Trouve tes 10 premiers clients en 30 jours." }
+    ]},
+    { titre:"E-commerce", produits:[
+      { titre:"Vendre en Ligne au Niger : De la Publication à la Livraison", desc:"Trouver les produits, faire des pubs qui vendent, gérer les livraisons à Niamey." },
+      { titre:"Le Dropshipping Local : Vendre sans Stock ni Capital", desc:"Connecte les fournisseurs de Niamey aux clients. Zéro risque." }
+    ]}
+  ]},
+
+  { id:"finance", domaine:"Argent & Finance Personnelle", icon:"💰", prix:5000, prixUSD:10, themes:[
+    { titre:"Gagner Plus", produits:[
+      { titre:"Gagner ses Premiers 100 000 FCFA en Ligne en 30 Jours", desc:"Plan jour par jour, même si tu pars de 0F. Actions simples et réalisables." },
+      { titre:"7 Sources de Revenus pour Salariés et Étudiants", desc:"Comment ajouter 100k à 300k/mois sans quitter ton travail/école." }
+    ]},
+    { titre:"Épargner et Investir", produits:[
+      { titre:"Gérer son Argent avec 50 000 FCFA de Salaire", desc:"Budget, épargne, et comment éviter les dettes. Méthode simple pour Africains." },
+      { titre:"Investir Petit : Crypto, Mobile Money, Commerce", desc:"Où placer 10 000, 50 000, 100 000 FCFA pour qu ils travaillent pour toi." }
+    ]},
+    { titre:"Mobile Money", produits:[
+      { titre:"Devenir Agent Nita, Wave, Orange Money Rentable", desc:"Même avec petit capital. Calculs, astuces, et comment fidéliser les clients." },
+      { titre:"Éviter les Arnaques Mobile Money et Banques en Ligne", desc:"Les 12 techniques des escrocs décodées. Protège ton argent." }
+    ]}
+  ]},
+
+  { id:"whatsapp", domaine:"Marketing WhatsApp", icon:"📱", prix:2500, prixUSD:5, themes:[
+    { titre:"Contenu qui Vend", produits:[
+      { titre:"Rédiger des Messages WhatsApp qui Vendent en 5 Lignes", desc:"50 modèles de messages prêts à copier pour tous les business." },
+      { titre:"Créer des Statuts WhatsApp qui Attirent des Clients", desc:"Canva + Stratégie. Passe de 0 vue à 200 vues par statut." }
+    ]},
+    { titre:"Communauté", produits:[
+      { titre:"Animer un Groupe WhatsApp de 1000 Membres Actifs", desc:"Règles, planning de contenu, et comment éviter les membres fantômes." },
+      { titre:"Transformer un Groupe Gratuit en Groupe VIP Payant", desc:"La méthode pour faire payer sans perdre tes membres." }
+    ]},
+    { titre:"Publicité", produits:[
+      { titre:"Publicité WhatsApp : Trouver 100 Clients sans Dépenser en Pub", desc:"Stratégie de prospection, groupes, et bouche à oreille digital." },
+      { titre:"Automatiser ses Réponses WhatsApp avec des Outils Gratuits", desc:"Gagner 3h par jour. Catalogue, réponses rapides, messages programmés." }
+    ]}
+  ]},
+
+  { id:"avance", domaine:"Business & Finance Avancé", icon:"🎁", prix:10000, prixUSD:20, themes:[
+    { titre:"Création & Gestion", produits:[
+      { titre:"Créer son Entreprise en OHADA : Guide Complet", desc:"Forme juridique, statuts, RCCM, IFU, CNSS, banque. Toutes les étapes pour créer légalement ton entreprise." },
+      { titre:"Comptabilité SYSCOHADA Simplifiée pour PME", desc:"Tenir les comptes, produire les états financiers, éviter les redressements." }
+    ]},
+    { titre:"Comptabilité & Fiscalité", produits:[
+      { titre:"Comptabilité Complète — Système Minimal de Trésorerie (SMT)", desc:"Le régime comptable simplifié pour très petites entreprises OHADA." },
+      { titre:"Fiscalité PME Africaine : Impôts, Optimisation, Contrôle Fiscal", desc:"Comprendre les impôts, payer juste, éviter les redressements." }
+    ]},
+    { titre:"Audit", produits:[
+      { titre:"Maîtrise Facile de l Audit : Guide Complet pour PME", desc:"Comprendre, préparer et réussir un audit interne ou externe. Sans être expert-comptable." }
+    ]}
+  ]},
+
+  { id:"tech", domaine:"Technique & Maintenance", icon:"🛠️", prix:25000, prixUSD:50, themes:[
+    { titre:"Maintenance Informatique", produits:[
+      { titre:"Maintenance Informatique : Devenir Technicien Support en 90 Jours", desc:"Diagnostic, réparation, assistance. Un métier très demandé en Afrique, accessible sans diplôme." },
+      { titre:"Kit Pratique Complet du Maintenance — Support Technique", desc:"25 procédures, scripts clients, modèles de devis et factures prêts à l emploi." }
+    ]}
+  ]},
+
+  { id:"prog", domaine:"Programmation", icon:"🐍", prix:5000, prixUSD:10, themes:[
+    { titre:"Python pour Débutants", produits:[
+      { titre:"Maîtriser Python en 10 Jours — Guide Pratique Débutant", desc:"De zéro à la création de tes premiers programmes. Plan jour par jour avec exemples concrets." }
+    ]}
+  ]}
+];
+
+/* ============================================================
+   RENDU DU CATALOGUE (avec échappement sécurisé)
+   ============================================================ */
+function formatPrix(prix){
+  return prix.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+}
+
+function escapeHtml(str){
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function renderCatalogue(filterId){
+  filterId = filterId || 'all';
+  const container = document.getElementById('catalogue-rendu');
+  let html = '';
+  CATALOGUE.forEach(function(dom){
+    if(filterId !== 'all' && dom.id !== filterId) return;
+    html += '<div class="domaine-block" id="domaine-' + dom.id + '">';
+    html += '<div class="domaine-header"><span class="icon">' + dom.icon + '</span><h3>' + escapeHtml(dom.domaine) + '</h3><span class="prix-domaine">' + formatPrix(dom.prix) + ' FCFA / ' + dom.prixUSD + '$</span></div>';
+    dom.themes.forEach(function(theme){
+      html += '<div class="theme-block"><div class="theme-title">' + escapeHtml(theme.titre) + '</div><div class="produits-grid">';
+      theme.produits.forEach(function(p){
+        const titreJS = JSON.stringify(p.titre);
+        const titreHtml = escapeHtml(p.titre);
+        const descHtml = escapeHtml(p.desc);
+        html += '<div class="produit-card">';
+        html += '<h4>' + titreHtml + '</h4>';
+        html += '<p>' + descHtml + '</p>';
+        html += '<div class="produit-footer">';
+        html += '<div class="prix"><span class="prix-fcfa">' + formatPrix(dom.prix) + ' FCFA</span><span class="prix-usd">soit ~' + dom.prixUSD + '$ USD</span></div>';
+        html += '<button class="btn-acheter" onclick=\'ouvrirCommande(' + titreJS + ', ' + dom.prix + ')\'>Acheter</button>';
+        html += '</div></div>';
+      });
+      html += '</div></div>';
+    });
+    html += '</div>';
+  });
+  container.innerHTML = html;
+}
+
+function filtrer(id, btn){
+  const btns = document.querySelectorAll('.filter-btn');
+  for(let i = 0; i < btns.length; i++) btns[i].classList.remove('active');
+  if(btn) btn.classList.add('active');
+  renderCatalogue(id);
+}
+
+function scrollToDomaine(id){
+  const btns = document.querySelectorAll('.filter-btn');
+  for(let i = 0; i < btns.length; i++) btns[i].classList.remove('active');
+  if(btns[0]) btns[0].classList.add('active');
+  renderCatalogue('all');
+  setTimeout(function(){
+    const el = document.getElementById('domaine-' + id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  }, 80);
+}
+
+/* ============================================================
+   MODALES
+   ============================================================ */
+let formationSelectionnee = '';
+
+function ouvrirCommande(nomFormation, prix){
+  prix = prix || 2500;
+  formationSelectionnee = nomFormation;
+  PRIX_MODULE_EN_COURS_FCFA = prix;
+  document.getElementById('formation').value = nomFormation;
+  document.getElementById('prixAffiche').value = formatPrix(prix) + ' FCFA';
+  openModal('modalCommande');
+}
+
+function openModal(id){
+  document.getElementById(id).classList.add('active');
+  document.body.style.overflow = 'hidden';
+  if(id === 'modalPaiement') chargerEquivalentPi();
+}
+
+function closeModal(id){
+  document.getElementById(id).classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+const overlays = document.querySelectorAll('.modal-overlay');
+for(let i = 0; i < overlays.length; i++){
+  overlays[i].addEventListener('click', function(e){
+    if(e.target === overlays[i]) closeModal(overlays[i].id);
+  });
+}
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){
+    const actives = document.querySelectorAll('.modal-overlay.active');
+    for(let i = 0; i < actives.length; i++) closeModal(actives[i].id);
+  }
+});
+
+/* ============================================================
+   COPIER
+   ============================================================ */
+function copierTexte(texte, bouton){
+  function ok(){
+    const original = bouton.textContent;
+    bouton.textContent = '✓ Copié';
+    bouton.classList.add('copied');
+    setTimeout(function(){
+      bouton.textContent = original;
+      bouton.classList.remove('copied');
+    }, 1800);
+  }
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(texte).then(ok).catch(function(){ fallbackCopy(texte, ok); });
+  } else {
+    fallbackCopy(texte, ok);
+  }
+}
+
+function fallbackCopy(texte, callback){
+  const ta = document.createElement('textarea');
+  ta.value = texte;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); callback(); } catch(e){}
+  document.body.removeChild(ta);
+}
+
+/* ============================================================
+   VALIDATION FORMULAIRE
+   ============================================================ */
+function validerCommande(e){
+  e.preventDefault();
+  const nom = document.getElementById('nom').value.trim();
+  const tel = document.getElementById('whatsapp').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const prix = document.getElementById('prixAffiche').value;
+  document.getElementById('merciRecap').innerHTML =
+    '<strong>📚 Formation :</strong> ' + escapeHtml(formationSelectionnee) + '<br>' +
+    '<strong>💰 Prix :</strong> ' + escapeHtml(prix) + '<br>' +
+    '<strong>👤 Nom :</strong> ' + escapeHtml(nom) + '<br>' +
+    '<strong>📱 WhatsApp :</strong> ' + escapeHtml(tel) + '<br>' +
+    '<strong>✉️ Email :</strong> ' + escapeHtml(email);
+  closeModal('modalCommande');
+  setTimeout(function(){
+    document.getElementById('merciOverlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }, 200);
+}
+
+/* ============================================================
+   WHATSAPP
+   ============================================================ */
+function renvoyerWhatsApp(){
+  const nom = document.getElementById('nom').value.trim();
+  const tel = document.getElementById('whatsapp').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const prix = document.getElementById('prixAffiche').value;
+  const message =
+    'Bonjour, je viens de passer commande pour :\n\n' +
+    '📚 *' + formationSelectionnee + '*\n' +
+    '💰 Prix : ' + prix + '\n\n' +
+    '👤 Nom : ' + nom + '\n' +
+    '📱 WhatsApp : ' + tel + '\n' +
+    '✉️ Email : ' + email + '\n\n' +
+    'Voici ma capture de paiement 👇';
+  const url = 'https://wa.me/' + CONFIG.whatsappReception + '?text=' + encodeURIComponent(message);
+  window.open(url, '_blank');
+}
+
+function fermerMerci(){
+  document.getElementById('merciOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+/* ============================================================
+   COMPTEURS
+   ============================================================ */
+let nbVisiteurs = 154;
+let nbVentes = 132;
+
+function animerCompteurs(){
+  const elVis = document.getElementById('visiteurs');
+  const elVentes = document.getElementById('ventes');
+  setInterval(function(){
+    const variation = Math.floor(Math.random() * 9) - 4;
+    nbVisiteurs = Math.max(20, nbVisiteurs + variation);
+    elVis.textContent = nbVisiteurs;
+  }, 4000);
+  setInterval(function(){
+    if(Math.random() > 0.5){
+      nbVentes += 1;
+      elVentes.textContent = nbVentes.toLocaleString('fr-FR');
+    }
+  }, 25000);
+  elVentes.textContent = nbVentes.toLocaleString('fr-FR');
+}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+const faqBtns = document.querySelectorAll('.faq-question');
+for(let i = 0; i < faqBtns.length; i++){
+  faqBtns[i].addEventListener('click', function(){
+    const item = this.parentElement;
+    const isOpen = item.classList.contains('open');
+    const items = document.querySelectorAll('.faq-item');
+    for(let j = 0; j < items.length; j++) items[j].classList.remove('open');
+    if(!isOpen) item.classList.add('open');
+  });
+}
+
+/* ============================================================
+   REVEAL + SCROLL TOP
+   ============================================================ */
+function initScrollReveal(){
+  const reveals = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){
+    for(let i = 0; i < reveals.length; i++) reveals[i].classList.add('visible');
+    return;
+  }
+  const observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  for(let i = 0; i < reveals.length; i++) observer.observe(reveals[i]);
+}
+
+function initScrollTop(){
+  const btn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 500) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  });
+}
+
+/* ============================================================
+   INITIALISATION
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', function(){
+  renderCatalogue('all');
+  animerCompteurs();
+  initScrollReveal();
+  initScrollTop();
+  setInterval(function(){
+    const modal = document.getElementById('modalPaiement');
+    if(modal && modal.classList.contains('active')) chargerEquivalentPi();
+  }, 60000);
+});
+</script>
+
+</body>
+</html>
